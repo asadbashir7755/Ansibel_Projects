@@ -1,0 +1,21 @@
+# Assignment: Nano Project ANP001: Write a Playbook to Deploy a Static HTML Site
+---
+  - name: deploy static html site on ubuntuserer using nginx
+    hosts: ubuntuserver
+    become: true
+    tasks:
+      - name: make sure nginx is installed
+        ansible.builtin.package:
+          name: nginx
+          state: present
+
+      - name: copy static file to nginx dir for serving
+        ansible.builtin.copy:
+          src: ./files/index.html
+          dest: /var/www/html
+          mode: 0644
+      - name: start and enable nginx service
+        ansible.builtin.service:
+          name: nginx
+          state: started
+          enabled: yes
