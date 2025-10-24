@@ -1,0 +1,22 @@
+website_name: elms2
+website_owner: phpuser
+website_group: phpuser
+website_path: /var/www/apache/elms
+website_repo: "https://github.com/asadbashir7755/php--app-for-deployment.git"
+
+
+
+db_name: elms2_db
+db_user: elms_user
+db_pass: elms_user@123
+db_host: localhost
+mysql_root_password: elms_user@123
+# config_file_path1: "/var/www/apache/elms/admin/includes"
+# config_file_path2: "/var/www/elms/includes"
+
+config_paths:
+  - "/var/www/apache/elms/admin/includes/config.php"
+  - "/var/www/apache/elms/includes/config.php"
+# db_dumpfile_path: "/var/www/apache/elms/"
+db_dumpfile_path: "/var/www/apache/elms/elmsdb.sql"
+

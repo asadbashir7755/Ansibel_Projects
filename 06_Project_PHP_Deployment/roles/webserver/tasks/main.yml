@@ -1,0 +1,6 @@
+- name: import install packages task here
+  ansible.builtin.import_tasks: install_packages.yaml
+- name: import create_user task here
+  ansible.builtin.import_tasks: create_user.yaml
+- name: import service task here 
+  ansible.builtin.import_tasks: service.yaml

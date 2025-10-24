@@ -1,0 +1,4 @@
+- name: import main conf task here
+  ansible.builtin.import_tasks: main_conf.yaml
+- name: import apache conf task here
+  ansible.builtin.import_tasks: apache_conf.yaml

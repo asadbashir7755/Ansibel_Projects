@@ -1,0 +1,14 @@
+- name: update and upgrade packages
+  ansible.builtin.apt: 
+    update_cache: "{{item.update_cache}}"
+    upgrade: "{{item.upgrade}}"
+  loop: "{{choices}}"
+  when: ansible_facts['os_family'] == "Debian"
+
+- name: install basic packages
+  ansible.builtin.package:
+    name: "{{item}}"
+    state: present
+  loop: "{{packages}}"
+
+

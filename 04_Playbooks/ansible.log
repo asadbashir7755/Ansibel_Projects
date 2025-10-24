@@ -441,3 +441,29 @@ uid=5004(deploy_user) gid=1001(deploy_user) groups=1001(deploy_user)
 2025-10-20 12:22:07,081 p=4736 u=asad n=ansible | changed: [13.233.225.159]
 2025-10-20 12:22:07,137 p=4736 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
 2025-10-20 12:22:07,138 p=4736 u=asad n=ansible | 13.233.225.159             : ok=11   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-22 12:22:21,036 p=4074 u=asad n=ansible | 13.233.225.159 | CHANGED | rc=0 >>
+ubuntu
+
+2025-10-22 12:22:45,903 p=4153 u=asad n=ansible | 13.233.225.159 | CHANGED | rc=0 >>
+ 07:22:45 up 8 days, 18:10,  1 user,  load average: 0.08, 0.02, 0.01
+
+2025-10-22 12:24:33,012 p=4312 u=asad n=ansible | ERROR! this task 'ping' has extra params, which is only allowed in the following modules: include_tasks, ansible.builtin.raw, ansible.builtin.add_host, meta, ansible.legacy.command, group_by, ansible.builtin.include_tasks, ansible.legacy.import_tasks, ansible.builtin.win_shell, ansible.legacy.include_role, ansible.windows.win_command, ansible.builtin.script, ansible.builtin.shell, include_role, ansible.builtin.command, ansible.builtin.import_tasks, ansible.legacy.raw, ansible.legacy.include_vars, ansible.builtin.include_role, import_tasks, win_shell, win_command, ansible.builtin.include_vars, ansible.legacy.add_host, ansible.builtin.set_fact, ansible.legacy.group_by, command, include_vars, ansible.legacy.shell, ansible.legacy.win_command, ansible.builtin.meta, ansible.windows.win_shell, ansible.builtin.group_by, ansible.legacy.include, shell, include, ansible.legacy.win_shell, ansible.legacy.include_tasks, ansible.builtin.import_role, ansible.builtin.win_command, ansible.legacy.script, raw, script, add_host, set_fact, ansible.legacy.meta, ansible.legacy.set_fact, ansible.builtin.include, import_role, ansible.legacy.import_role
+2025-10-22 12:24:47,173 p=4355 u=asad n=ansible | 13.233.225.159 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2025-10-22 12:27:04,638 p=4595 u=asad n=ansible | ERROR! this task 'apt' has extra params, which is only allowed in the following modules: ansible.legacy.group_by, ansible.builtin.meta, ansible.builtin.include_vars, ansible.legacy.command, ansible.legacy.import_role, ansible.legacy.script, ansible.builtin.add_host, ansible.legacy.include_vars, meta, ansible.builtin.include_role, command, import_role, ansible.legacy.win_shell, shell, ansible.legacy.raw, ansible.legacy.add_host, ansible.legacy.include_tasks, ansible.builtin.include_tasks, ansible.legacy.meta, include_tasks, ansible.builtin.include, ansible.builtin.raw, ansible.builtin.win_shell, include, ansible.legacy.include_role, ansible.legacy.set_fact, ansible.builtin.win_command, ansible.windows.win_shell, ansible.builtin.import_role, ansible.legacy.include, include_role, win_command, ansible.legacy.shell, raw, script, ansible.windows.win_command, ansible.builtin.shell, ansible.builtin.command, ansible.builtin.script, set_fact, ansible.builtin.group_by, add_host, ansible.legacy.win_command, include_vars, ansible.builtin.import_tasks, ansible.legacy.import_tasks, ansible.builtin.set_fact, win_shell, group_by, import_tasks
+2025-10-22 12:27:58,566 p=4634 u=asad n=ansible | 13.233.225.159 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "cache_update_time": 1761047912,
+    "cache_updated": false,
+    "changed": false
+}
+2025-10-22 12:29:22,223 p=4733 u=asad n=ansible | 13.233.225.159 | CHANGED | rc=0 >>
+git version 2.43.0
+

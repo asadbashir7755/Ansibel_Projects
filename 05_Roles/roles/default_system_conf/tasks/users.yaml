@@ -1,0 +1,23 @@
+- name: Create all required groups (primary + secondary)
+  ansible.builtin.group:
+    name: "{{ item }}"
+    state: present
+  loop: >-
+    {{
+      users | map(attribute='group') | list +
+      users | map(attribute='groups') | select('defined') | join(',') | split(',') | unique
+    }}
+  loop_control:
+    label: "{{ item }}"
+
+
+- name: create users on target server
+  ansible.builtin.user:
+    name: "{{item.name}}"
+    comment: "{{item.comment}}"
+    group: "{{item.group}}"
+    groups: "{{item.groups | default(omit)}}"
+    create_home: "{{item.create_home}}"
+    state: present
+    append: "{{item.append}}"
+  loop: "{{ users}}"

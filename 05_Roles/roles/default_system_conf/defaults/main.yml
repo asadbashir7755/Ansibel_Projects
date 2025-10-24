@@ -1,0 +1,17 @@
+users:
+  - name: user1
+    comment: "user1"
+    group: user1
+    groups: "user1,user2"
+    create_home: yes
+    append: yes
+  - name: user2
+    comment: "user2"
+    group: user2
+    groups: "user2,user1"
+    create_home: yes
+  - name: user3
+    comment: "user3"
+    group: user3
+    create_home: yes
+    

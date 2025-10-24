@@ -1,0 +1,13 @@
+- name: make sure git is installed
+  ansible.builtin.package:
+    name: git 
+    state: present
+
+- name: clone repo in   relevant website folder
+  ansible.builtin.git:
+    repo: "{{item.repo_link}}"
+    dest: "{{item.doc_root}}/{{item.name}}"
+    clone: yes
+    update: yes
+  loop: "{{websites}}"
+  notify: restart apache
