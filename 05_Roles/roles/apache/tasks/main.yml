@@ -1,9 +1,0 @@
----
-  - name: install apache on ubuntuserver
-    ansible.builtin.import_tasks: install.yaml
-  - name: start apache service on ubuntuserver
-    ansible.builtin.import_tasks: service.yaml
-  - name: configure apache to listen on port 8080 as port 80 is already in ubuntuserver
-    ansible.builtin.import_tasks: config.yaml
-  - name: clone repo inside relevant folders
-    ansible.builtin.import_tasks: repo_clone.yaml

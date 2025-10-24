@@ -1,6 +1,0 @@
----
-  - name: make sure apache service is running
-    ansible.builtin.service:
-      name: apache2
-      state: started
-      enabled: true

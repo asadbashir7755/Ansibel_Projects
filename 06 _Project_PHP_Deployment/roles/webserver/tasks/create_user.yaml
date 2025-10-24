@@ -1,0 +1,9 @@
+- name: create website user
+  ansible.builtin.user:
+    name: "{{item.name}}"
+    shell: "{{item.shell}}"
+    home: "{{item.home}}"
+    password: "{{item.password | password_hash('sha512')}}"
+  loop: "{{users}}"
+
+  

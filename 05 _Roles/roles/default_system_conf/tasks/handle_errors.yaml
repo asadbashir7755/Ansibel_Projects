@@ -1,0 +1,12 @@
+- block:
+    - name: Install package and handle error
+      ansible.builtin.package:
+        name: nonexistent
+        state: present
+  rescue:
+    - debug:
+        msg: "Installation failed, skipping"
+- name: after now install git 
+  ansible.builtin.package:
+    name: git 
+    state: present

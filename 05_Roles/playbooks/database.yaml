@@ -1,6 +1,0 @@
----
-  - name: deploying php website on ubuntuserver
-    hosts: ubuntuserver
-    become: true
-    roles:
-      - php_website

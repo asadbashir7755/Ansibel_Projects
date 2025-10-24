@@ -1,0 +1,35 @@
+# ==============================
+# MySQL Configuration for Dev
+# ==============================
+
+mysql_root_password: "elms_user_root@123"
+
+# Database creation
+mysql_databases:
+  - name: elms2_db
+    encoding: utf8
+    collation: utf8_general_ci
+
+# Application user creation
+mysql_users:
+  - name: elms_user
+    host: "%"
+    password: "elms_user@123"
+    priv: "elms2_db.*:ALL"
+
+# Bind to all interfaces (allow remote connections if firewall allows)
+mysql_bind_address: "0.0.0.0"
+mysql_enabled_on_startup: true
+
+# Optional optimizations
+mysql_key_buffer_size: "256M"
+mysql_max_allowed_packet: "64M"
+mysql_table_open_cache: "256"
+
+# Ensure compatibility with Ubuntu 24+
+mysql_daemon: mysql
+mysql_packages:
+  - mysql-server
+  - mysql-client
+  - python3-pymysql
+

@@ -1,0 +1,6 @@
+- name: install php related packages
+  ansible.builtin.package:
+    name: "{{item}}"
+    state: present
+  loop: "{{php_packages}}"
+

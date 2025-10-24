@@ -1,0 +1,67 @@
+# deploy  portfolio on ubuntuserver afte cloning from github 
+---
+  - name: deploy portfolio website on ubuntuserver on nginx after cloning from github
+    hosts: ubuntuserver
+    become: true
+    vars_files:
+      - vars/main.yaml
+    tasks:
+      - name: ensure nginx is installed
+        ansible.builtin.package:
+          name: nginx
+          state: present
+      - name: ensure target dir exist which is /var/www/html/site2
+        ansible.builtin.file:
+          path: "{{ site_root}}"
+          state: directory
+          mode: '0755'
+
+      - name: clone github repo in relevant dir(/var/www/html/site2)
+        ansible.builtin.git:
+          repo: "{{ repo_url}}"
+          dest: "{{ site_root}}"
+          clone: yes
+          update: yes
+      - name: create nginx config file from template
+        ansible.builtin.template:
+          src: "templates/nginx-site.j2"
+          dest: "/etc/nginx/sites-available/{{ site_name }}"
+          mode: '0644'
+          
+
+      - name: enable site2 by creating symlink
+        ansible.builtin.file:
+          src: "/etc/nginx/sites-available/{{ site_name}}"
+          dest: "/etc/nginx/sites-enabled/{{ site_name}}"
+          state: link
+      - name: remove default site if exist in sites_available
+        ansible.builtin.file:
+          path: /etc/nginx/sites-available/default
+          state: absent
+        
+      - name: remove default site if exist in sites_enabled
+        ansible.builtin.file:
+          path: /etc/nginx/sites_enabled/default
+          state: absent
+      
+      - name: Test nginx configuration
+        ansible.builtin.command: nginx -t
+        register: nginx_test
+        ignore_errors: yes
+
+      - name: Print nginx config test output
+        ansible.builtin.debug:
+          var: nginx_test.stdout_lines
+      
+      - name: Reload nginx if config is OK
+        ansible.builtin.service:
+          name: nginx
+          state: reloaded
+        when: nginx_test.rc == 0
+
+      - name: Rollback if nginx config test fails
+        ansible.builtin.shell: |
+         rm -f /etc/nginx/sites-enabled/{{ site_name }}
+         nginx -t && systemctl reload nginx
+        when: nginx_test.rc != 0
+        ignore_errors: yes

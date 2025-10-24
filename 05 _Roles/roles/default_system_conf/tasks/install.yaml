@@ -1,0 +1,11 @@
+- name: check nginx on server after checking if not installed
+  ansible.builtin.command: nginx -v
+  register: nginx_check
+  ignore_errors: yes
+
+- name: install  nginx if not installed 
+  ansible.builtin.package:
+    name: nginx
+    state: 
+  when: nginx_check.rc !=0
+

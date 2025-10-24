@@ -1,8 +1,0 @@
----
-  - name: installing lamp stack on server
-    hosts: ubuntuserver
-    become: true
-    # gather_facts: false
-    roles:
-      - php_website
-      # - database

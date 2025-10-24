@@ -1,0 +1,17 @@
+- name: imported user creation task 
+  ansible.builtin.import_tasks: users.yaml
+
+- name: import installation related task here
+  ansible.builtin.import_tasks: install.yaml
+
+- name: import resgisters  related task here
+  ansible.builtin.import_tasks: registers.yaml
+
+- name: import handle error task here 
+  ansible.builtin.import_tasks: handle_errors.yaml
+
+- name: import setupmodule task here
+  ansible.builtin.import_tasks: setup_module.yaml
+
+- name: import conditions related task here
+  ansible.builtin.import_tasks: conditions.yaml

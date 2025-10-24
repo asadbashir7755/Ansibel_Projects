@@ -1,0 +1,469 @@
+2025-10-19 15:06:23,049 p=8875 u=asad n=ansible | [WARNING]:  * Failed to parse /home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/03_Playbooks/inventory with
+yaml plugin: We were unable to read either as JSON nor YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 2
+(char 1)  Syntax Error while loading YAML.   did not find expected <document start>  The error appears to be in
+'/home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/03_Playbooks/inventory': line 2, column 1, but may be
+elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:  [all] 13.233.225.159 ansible_user=ubuntu
+ansible_ssh_private_key_file=/home/asad/.ssh/id_rsa_ubuntuserver ^ here
+
+2025-10-19 15:06:23,050 p=8875 u=asad n=ansible | [WARNING]:  * Failed to parse /home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/03_Playbooks/inventory with
+ini plugin: /home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/03_Playbooks/inventory:8: Expected group name,
+got: 13.233.225.159 ansible_user=ubuntu ansible_ssh_private_key_file=/home/asad/.ssh/id_rsa_ubuntuserver
+
+2025-10-19 15:06:23,051 p=8875 u=asad n=ansible | [WARNING]: Unable to parse /home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/03_Playbooks/inventory as an
+inventory source
+
+2025-10-19 15:06:23,051 p=8875 u=asad n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-10-19 15:06:29,544 p=8875 u=asad n=ansible | 13.233.225.159 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2025-10-19 15:08:28,418 p=8960 u=asad n=ansible | 13.233.225.159 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2025-10-19 16:07:34,343 p=9749 u=asad n=ansible | 13.233.225.159 | CHANGED | rc=0 >>
+ip-172-31-43-187
+
+2025-10-19 16:13:11,530 p=9845 u=asad n=ansible | 13.233.225.159 | CHANGED | rc=0 >>
+Reading package lists...
+Building dependency tree...
+Reading state information...
+vim is already the newest version (2:9.1.0016-1ubuntu7.9).
+vim set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 24 not upgraded.
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+2025-10-19 16:14:08,899 p=9934 u=asad n=ansible | 13.233.225.159 | CHANGED | rc=0 >>
+ubuntu
+
+2025-10-19 16:14:48,449 p=10005 u=asad n=ansible | 13.233.225.159 | FAILED | rc=1 >>
+cat: /etc/release: No such file or directorynon-zero return code
+
+2025-10-19 16:16:54,541 p=10101 u=asad n=ansible | 13.233.225.159 | CHANGED | rc=0 >>
+Distributor ID:	Ubuntu
+Description:	Ubuntu 24.04.3 LTS
+Release:	24.04
+Codename:	noble
+
+2025-10-19 16:17:19,959 p=10195 u=asad n=ansible |  [ERROR]: User interrupted execution
+
+2025-10-19 16:18:27,666 p=10297 u=asad n=ansible | 13.233.225.159 | CHANGED | rc=0 >>
+PRETTY_NAME="Ubuntu 24.04.3 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.3 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+
+2025-10-19 17:23:58,019 p=3536 u=asad n=ansible | ERROR! Missing name(s), incorrect options passed for detailed documentation.
+2025-10-19 17:30:19,835 p=3818 u=asad n=ansible | 13.233.225.159 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "cache_update_time": 1760837045,
+    "cache_updated": false,
+    "changed": false
+}
+2025-10-19 18:17:01,332 p=4717 u=asad n=ansible | playbook: 01_First_Playbook.yaml
+2025-10-19 18:19:58,537 p=4839 u=asad n=ansible | PLAY [base system configuration] ***********************************************************************************************************
+2025-10-19 18:19:58,627 p=4839 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-19 18:20:09,629 p=4839 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 18:20:09,666 p=4839 u=asad n=ansible | TASK [ansible.builtin.user] ****************************************************************************************************************
+2025-10-19 18:20:14,685 p=4839 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-19 18:20:14,762 p=4839 u=asad n=ansible | TASK [ansible.builtin.user] ****************************************************************************************************************
+2025-10-19 18:20:19,848 p=4839 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 18:20:19,890 p=4839 u=asad n=ansible | TASK [ansible.builtin.package] *************************************************************************************************************
+2025-10-19 18:20:27,059 p=4839 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-19 18:20:27,084 p=4839 u=asad n=ansible | TASK [ansible.builtin.package] *************************************************************************************************************
+2025-10-19 18:20:34,146 p=4839 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-19 18:20:34,200 p=4839 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-19 18:20:34,202 p=4839 u=asad n=ansible | 13.233.225.159             : ok=5    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-19 18:20:56,289 p=5039 u=asad n=ansible | PLAY [base system configuration] ***********************************************************************************************************
+2025-10-19 18:20:56,344 p=5039 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-19 18:21:04,088 p=5039 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 18:21:04,159 p=5039 u=asad n=ansible | TASK [ansible.builtin.user] ****************************************************************************************************************
+2025-10-19 18:21:08,992 p=5039 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-19 18:21:09,029 p=5039 u=asad n=ansible | TASK [ansible.builtin.user] ****************************************************************************************************************
+2025-10-19 18:21:13,001 p=5039 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 18:21:13,054 p=5039 u=asad n=ansible | TASK [ansible.builtin.package] *************************************************************************************************************
+2025-10-19 18:21:23,694 p=5039 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-19 18:21:23,733 p=5039 u=asad n=ansible | TASK [ansible.builtin.package] *************************************************************************************************************
+2025-10-19 18:21:36,643 p=5039 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-19 18:21:36,702 p=5039 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-19 18:21:36,703 p=5039 u=asad n=ansible | 13.233.225.159             : ok=5    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-19 18:23:26,397 p=5300 u=asad n=ansible | playbook: 01_First_Playbook.yaml
+2025-10-19 18:23:26,399 p=5300 u=asad n=ansible |   play #1 (prod): base system configuration	TAGS: []
+    pattern: ['prod']
+    hosts (1):
+      13.233.225.159
+2025-10-19 18:41:35,810 p=5358 u=asad n=ansible | playbook: 01_First_Playbook.yaml
+2025-10-19 18:41:35,836 p=5358 u=asad n=ansible |   play #1 (prod): base system configuration	TAGS: []
+2025-10-19 18:41:35,880 p=5358 u=asad n=ansible |       TASK TAGS: [adminuser]
+
+2025-10-19 18:44:22,804 p=5699 u=asad n=ansible | PLAY [base system configuration] ***********************************************************************************************************
+2025-10-19 18:44:23,222 p=5699 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-19 19:23:57,577 p=3774 u=asad n=ansible | PLAY [base system configuration] ***********************************************************************************************************
+2025-10-19 19:23:57,671 p=3774 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-19 19:25:05,151 p=3774 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 19:25:05,338 p=3774 u=asad n=ansible | TASK [ansible.builtin.user] ****************************************************************************************************************
+2025-10-19 19:25:46,707 p=3774 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 19:25:47,080 p=3774 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-19 19:25:47,101 p=3774 u=asad n=ansible | 13.233.225.159             : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-19 19:37:21,819 p=4293 u=asad n=ansible | 13.233.225.159 | CHANGED | rc=0 >>
+● ntpsec.service - Network Time Service
+     Loaded: loaded (/usr/lib/systemd/system/ntpsec.service; enabled; preset: enabled)
+     Active: active (running) since Sun 2025-10-19 13:21:32 UTC; 1h 15min ago
+       Docs: man:ntpd(8)
+    Process: 32258 ExecStart=/usr/libexec/ntpsec/ntp-systemd-wrapper (code=exited, status=0/SUCCESS)
+   Main PID: 32261 (ntpd)
+      Tasks: 1 (limit: 1121)
+     Memory: 11.5M (peak: 11.8M)
+        CPU: 426ms
+     CGroup: /system.slice/ntpsec.service
+             └─32261 /usr/sbin/ntpd -p /run/ntpd.pid -c /etc/ntpsec/ntp.conf -g -N -u ntpsec:ntpsec
+
+Oct 19 13:21:37 ip-172-31-43-187 ntpd[32261]: DNS: Server taking: 185.125.190.56
+Oct 19 13:21:37 ip-172-31-43-187 ntpd[32261]: DNS: dns_take_status: ntp.ubuntu.com=>good, 0
+Oct 19 13:32:30 ip-172-31-43-187 ntpd[32261]: PROTO: 160.250.111.199 unlink local addr 172.31.43.187 -> <null>
+Oct 19 13:32:46 ip-172-31-43-187 ntpd[32261]: PROTO: 192.46.215.60 unlink local addr 172.31.43.187 -> <null>
+Oct 19 13:32:46 ip-172-31-43-187 ntpd[32261]: PROTO: 139.84.142.141 unlink local addr 172.31.43.187 -> <null>
+Oct 19 13:32:52 ip-172-31-43-187 ntpd[32261]: PROTO: 95.216.144.226 unlink local addr 172.31.43.187 -> <null>
+Oct 19 13:38:25 ip-172-31-43-187 ntpd[32261]: PROTO: 95.216.192.15 unlink local addr 172.31.43.187 -> <null>
+Oct 19 13:38:28 ip-172-31-43-187 ntpd[32261]: PROTO: 192.46.210.39 unlink local addr 172.31.43.187 -> <null>
+Oct 19 13:39:30 ip-172-31-43-187 ntpd[32261]: PROTO: 103.136.36.100 unlink local addr 172.31.43.187 -> <null>
+Oct 19 13:48:39 ip-172-31-43-187 ntpd[32261]: PROTO: 160.191.28.187 unlink local addr 172.31.43.187 -> <null>
+
+2025-10-19 20:37:12,057 p=4959 u=asad n=ansible | ERROR! tags must be specified as a list
+
+The error appears to be in '/home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/04_Playbooks/01_First_Playbook.yaml': line 39, column 11, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        tags:
+          name: ntpservice
+          ^ here
+
+2025-10-19 20:37:31,993 p=5013 u=asad n=ansible | ERROR! tags must be specified as a list
+
+The error appears to be in '/home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/04_Playbooks/01_First_Playbook.yaml': line 39, column 11, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        tags:
+          name: ntpservice
+          ^ here
+
+2025-10-19 20:38:27,869 p=5041 u=asad n=ansible | PLAY [base system configuration] ***********************************************************************************************************
+2025-10-19 20:38:27,895 p=5041 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-19 20:39:24,461 p=5041 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 20:39:24,517 p=5041 u=asad n=ansible | TASK [ansible.builtin.service] *************************************************************************************************************
+2025-10-19 20:40:02,595 p=5041 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (ansible.legacy.systemd) module: enables. Supported parameters include: daemon_reexec, daemon_reload, enabled, force, masked, name, no_block, scope, state (daemon-reexec, daemon-reload, service, unit)."}
+2025-10-19 20:40:02,604 p=5041 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-19 20:40:02,605 p=5041 u=asad n=ansible | 13.233.225.159             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-19 20:40:41,025 p=5190 u=asad n=ansible | PLAY [base system configuration] ***********************************************************************************************************
+2025-10-19 20:40:41,042 p=5190 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-19 20:41:13,702 p=5190 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 20:41:13,753 p=5190 u=asad n=ansible | TASK [ansible.builtin.service] *************************************************************************************************************
+2025-10-19 20:41:55,507 p=5190 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 20:41:55,642 p=5190 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-19 20:41:55,655 p=5190 u=asad n=ansible | 13.233.225.159             : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-19 23:07:42,240 p=5883 u=asad n=ansible | playbook: 01_First_Playbook.yaml
+2025-10-19 23:07:54,364 p=5901 u=asad n=ansible | PLAY [base system configuration] ***********************************************************************************************************
+2025-10-19 23:07:54,453 p=5901 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-19 23:09:12,210 p=5901 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 23:09:12,407 p=5901 u=asad n=ansible | TASK [ansible.builtin.user] ****************************************************************************************************************
+2025-10-19 23:09:38,126 p=5901 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 23:09:38,180 p=5901 u=asad n=ansible | TASK [ansible.builtin.user] ****************************************************************************************************************
+2025-10-19 23:10:15,322 p=5901 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 23:10:15,470 p=5901 u=asad n=ansible | TASK [ansible.builtin.package] *************************************************************************************************************
+2025-10-19 23:11:24,889 p=5901 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 23:11:25,486 p=5901 u=asad n=ansible | TASK [ansible.builtin.package] *************************************************************************************************************
+2025-10-19 23:12:00,818 p=5901 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 23:12:00,949 p=5901 u=asad n=ansible | TASK [ansible.builtin.service] *************************************************************************************************************
+2025-10-19 23:13:01,927 p=5901 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 23:13:02,598 p=5901 u=asad n=ansible | PLAY [another play for ubuntuserver only] **************************************************************************************************
+2025-10-19 23:13:02,927 p=5901 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-19 23:13:54,635 p=5901 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 23:13:55,763 p=5901 u=asad n=ansible | TASK [create a deploy user with uid 5003] **************************************************************************************************
+2025-10-19 23:14:52,209 p=5901 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-19 23:15:04,196 p=5901 u=asad n=ansible | TASK [installing git on ubuntuserver] ******************************************************************************************************
+2025-10-19 23:21:54,034 p=3551 u=asad n=ansible | playbook: 01_First_Playbook.yaml
+2025-10-19 23:21:54,038 p=3551 u=asad n=ansible |   play #1 (prod): base system configuration	TAGS: []
+2025-10-19 23:21:54,044 p=3551 u=asad n=ansible |     tasks:
+      ansible.builtin.user	TAGS: [adminuser]
+      ansible.builtin.user	TAGS: []
+      ansible.builtin.package	TAGS: []
+      ansible.builtin.package	TAGS: []
+      ansible.builtin.service	TAGS: [ntpservice]
+
+2025-10-19 23:21:54,045 p=3551 u=asad n=ansible |   play #2 (ubuntuserver): another play for ubuntuserver only	TAGS: []
+2025-10-19 23:21:54,053 p=3551 u=asad n=ansible |     tasks:
+      create a deploy user with uid 5003	TAGS: []
+      installing git on ubuntuserver	TAGS: []
+
+2025-10-19 23:24:32,830 p=3636 u=asad n=ansible | PLAY [base system configuration] ***********************************************************************************************************
+2025-10-19 23:24:32,860 p=3636 u=asad n=ansible | PLAY [another play for ubuntuserver only] **************************************************************************************************
+2025-10-19 23:24:32,873 p=3636 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-19 23:25:09,344 p=3636 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 23:25:09,358 p=3636 u=asad n=ansible | TASK [create a deploy user with uid 5003] **************************************************************************************************
+2025-10-19 23:25:14,223 p=3636 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"changed": false, "msg": "Group deploy user does not exist"}
+2025-10-19 23:25:14,226 p=3636 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-19 23:25:14,226 p=3636 u=asad n=ansible | 13.233.225.159             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-19 23:26:44,361 p=3783 u=asad n=ansible | PLAY [base system configuration] ***********************************************************************************************************
+2025-10-19 23:26:44,379 p=3783 u=asad n=ansible | PLAY [another play for ubuntuserver only] **************************************************************************************************
+2025-10-19 23:26:44,392 p=3783 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-19 23:27:30,682 p=3783 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 23:27:30,704 p=3783 u=asad n=ansible | TASK [create a deploy user with uid 5003] **************************************************************************************************
+2025-10-19 23:27:53,916 p=3783 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"changed": false, "msg": "Group deploy user does not exist"}
+2025-10-19 23:27:53,919 p=3783 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-19 23:27:53,925 p=3783 u=asad n=ansible | 13.233.225.159             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-19 23:33:20,064 p=4005 u=asad n=ansible | PLAY [base system configuration] ***********************************************************************************************************
+2025-10-19 23:33:20,073 p=4005 u=asad n=ansible | PLAY [another play for ubuntuserver only] **************************************************************************************************
+2025-10-19 23:33:20,075 p=4005 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-19 23:33:20,078 p=4005 u=asad n=ansible |  [ERROR]: No matching task "create a deploy user with uid 5004" found. Note: --start-at-task can only follow static includes.
+
+2025-10-19 23:34:13,176 p=4053 u=asad n=ansible | PLAY [base system configuration] ***********************************************************************************************************
+2025-10-19 23:34:13,196 p=4053 u=asad n=ansible | PLAY [another play for ubuntuserver only] **************************************************************************************************
+2025-10-19 23:34:13,219 p=4053 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-19 23:34:41,483 p=4053 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 23:34:41,520 p=4053 u=asad n=ansible | TASK [create a deploy user with uid 5004] **************************************************************************************************
+2025-10-19 23:34:48,082 p=4053 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"changed": false, "msg": "Group deploy user does not exist"}
+2025-10-19 23:34:48,094 p=4053 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-19 23:34:48,101 p=4053 u=asad n=ansible | 13.233.225.159             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-19 23:35:59,075 p=4192 u=asad n=ansible | PLAY [base system configuration] ***********************************************************************************************************
+2025-10-19 23:35:59,104 p=4192 u=asad n=ansible | PLAY [another play for ubuntuserver only] **************************************************************************************************
+2025-10-19 23:35:59,141 p=4192 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-19 23:36:48,241 p=4192 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 23:36:48,280 p=4192 u=asad n=ansible | TASK [create a deploy user with uid 5004] **************************************************************************************************
+2025-10-19 23:37:01,228 p=4192 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"changed": false, "msg": "Group deploy_user does not exist"}
+2025-10-19 23:37:01,231 p=4192 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-19 23:37:01,232 p=4192 u=asad n=ansible | 13.233.225.159             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-19 23:41:12,519 p=4337 u=asad n=ansible | PLAY [base system configuration] ***********************************************************************************************************
+2025-10-19 23:41:12,627 p=4337 u=asad n=ansible | PLAY [another play for ubuntuserver only] **************************************************************************************************
+2025-10-19 23:41:12,673 p=4337 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-19 23:42:36,539 p=4337 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 23:42:36,596 p=4337 u=asad n=ansible | TASK [create a deploy user with uid 5004] **************************************************************************************************
+2025-10-19 23:42:56,887 p=4337 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"changed": false, "msg": "Group deploy_user does not exist"}
+2025-10-19 23:42:56,891 p=4337 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-19 23:42:56,892 p=4337 u=asad n=ansible | 13.233.225.159             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-19 23:43:22,989 p=4535 u=asad n=ansible | PLAY [base system configuration] ***********************************************************************************************************
+2025-10-19 23:43:23,025 p=4535 u=asad n=ansible | PLAY [another play for ubuntuserver only] **************************************************************************************************
+2025-10-19 23:43:23,052 p=4535 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-19 23:43:52,683 p=4535 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 23:43:52,730 p=4535 u=asad n=ansible | TASK [create a deploy_user group] **********************************************************************************************************
+2025-10-19 23:44:25,376 p=4535 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-19 23:44:25,456 p=4535 u=asad n=ansible | TASK [create a deploy user with uid 5004] **************************************************************************************************
+2025-10-19 23:45:05,660 p=4535 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-19 23:45:05,702 p=4535 u=asad n=ansible | TASK [installing git on ubuntuserver] ******************************************************************************************************
+2025-10-19 23:45:54,505 p=4535 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-19 23:45:54,646 p=4535 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-19 23:45:54,647 p=4535 u=asad n=ansible | 13.233.225.159             : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-19 23:49:10,470 p=4814 u=asad n=ansible | 13.233.225.159 | CHANGED | rc=0 >>
+tcpdump:x:107:108::/nonexistent:/usr/sbin/nologin
+landscape:x:108:109::/var/lib/landscape:/usr/sbin/nologin
+fwupd-refresh:x:990:990:Firmware update daemon:/var/lib/fwupd:/usr/sbin/nologin
+polkitd:x:989:989:User for polkitd:/:/usr/sbin/nologin
+ec2-instance-connect:x:109:65534::/nonexistent:/usr/sbin/nologin
+_chrony:x:110:112:Chrony daemon,,,:/var/lib/chrony:/usr/sbin/nologin
+ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
+admin:x:5001:110:admin user:/home/admin:/bin/sh
+ntpsec:x:111:113::/nonexistent:/usr/sbin/nologin
+deploy_user:x:5004:1001:deploy_user:/home/deploy_user:/bin/sh
+
+2025-10-19 23:50:34,948 p=4935 u=asad n=ansible | 13.233.225.159 | CHANGED | rc=0 >>
+tcpdump:x:108:
+landscape:x:109:
+fwupd-refresh:x:990:
+polkitd:x:989:
+admin:x:110:
+netdev:x:111:
+_chrony:x:112:
+ubuntu:x:1000:
+ntpsec:x:113:
+deploy_user:x:1001:
+
+2025-10-19 23:53:10,235 p=5020 u=asad n=ansible | 13.233.225.159 | FAILED | rc=1 >>
+id: ‘deploy-user’: no such usernon-zero return code
+
+2025-10-19 23:53:44,678 p=5098 u=asad n=ansible | 13.233.225.159 | CHANGED | rc=0 >>
+uid=5004(deploy_user) gid=1001(deploy_user) groups=1001(deploy_user)
+
+2025-10-20 00:30:35,335 p=5975 u=asad n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: ubuntuserer
+
+2025-10-20 00:30:35,348 p=5975 u=asad n=ansible | playbook: 02_Second_Playbook.yaml
+2025-10-20 00:31:07,848 p=6007 u=asad n=ansible | playbook: 02_Second_Playbook.yaml
+2025-10-20 00:31:13,529 p=6026 u=asad n=ansible | PLAY [deploy static html site on ubuntuserer using nginx] **********************************************************************************
+2025-10-20 00:31:13,568 p=6026 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-20 00:31:41,934 p=6026 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 00:31:41,959 p=6026 u=asad n=ansible | TASK [make sure nginx is installed] ********************************************************************************************************
+2025-10-20 00:32:05,015 p=6026 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 00:32:05,170 p=6026 u=asad n=ansible | TASK [copy static file to nginx dir for serving] *******************************************************************************************
+2025-10-20 00:32:27,177 p=6026 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 00:32:27,230 p=6026 u=asad n=ansible | TASK [start and enable nginx service] ******************************************************************************************************
+2025-10-20 00:32:46,749 p=6026 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"changed": false, "msg": "Could not find the requested service nginx: host"}
+2025-10-20 00:32:46,779 p=6026 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-20 00:32:46,782 p=6026 u=asad n=ansible | 13.233.225.159             : ok=3    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-20 00:33:11,745 p=6288 u=asad n=ansible | PLAY [deploy static html site on ubuntuserer using nginx] **********************************************************************************
+2025-10-20 00:33:11,882 p=6288 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-20 00:33:43,317 p=6288 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 00:33:43,502 p=6288 u=asad n=ansible | TASK [make sure nginx is installed] ********************************************************************************************************
+2025-10-20 00:34:06,689 p=6288 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 00:34:06,749 p=6288 u=asad n=ansible | TASK [copy static file to nginx dir for serving] *******************************************************************************************
+2025-10-20 00:34:47,750 p=6288 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"changed": false, "checksum": "3ef833ba5b098c9da88a6fc64f3660ca3566bff1", "gid": 0, "group": "root", "mode": "0644", "msg": "chown failed: failed to look up user nginx", "owner": "root", "path": "/usr/share/nginx/html/index.html", "size": 6838, "state": "file", "uid": 0}
+2025-10-20 00:34:47,767 p=6288 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-20 00:34:47,808 p=6288 u=asad n=ansible | 13.233.225.159             : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-20 00:36:27,040 p=6486 u=asad n=ansible | PLAY [deploy static html site on ubuntuserer using nginx] **********************************************************************************
+2025-10-20 00:36:27,156 p=6486 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-20 00:37:50,969 p=6486 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 00:37:51,221 p=6486 u=asad n=ansible | TASK [make sure nginx is installed] ********************************************************************************************************
+2025-10-20 00:38:36,823 p=6486 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 00:38:37,006 p=6486 u=asad n=ansible | TASK [copy static file to nginx dir for serving] *******************************************************************************************
+2025-10-20 00:39:28,818 p=6486 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 00:39:28,985 p=6486 u=asad n=ansible | TASK [start and enable nginx service] ******************************************************************************************************
+2025-10-20 00:40:04,877 p=6486 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 00:40:06,602 p=6486 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-20 00:40:06,604 p=6486 u=asad n=ansible | 13.233.225.159             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-20 00:49:25,091 p=7183 u=asad n=ansible | PLAY [deploy static html site on ubuntuserer using nginx] **********************************************************************************
+2025-10-20 00:49:25,118 p=7183 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-20 00:50:38,816 p=7183 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 00:50:38,865 p=7183 u=asad n=ansible | TASK [make sure nginx is installed] ********************************************************************************************************
+2025-10-20 00:51:34,462 p=7183 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 00:51:34,493 p=7183 u=asad n=ansible | TASK [copy static file to nginx dir for serving] *******************************************************************************************
+2025-10-20 00:52:29,753 p=7183 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 00:52:29,789 p=7183 u=asad n=ansible | TASK [start and enable nginx service] ******************************************************************************************************
+2025-10-20 00:52:54,133 p=7183 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 00:52:54,197 p=7183 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-20 00:52:54,199 p=7183 u=asad n=ansible | 13.233.225.159             : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-20 02:12:25,632 p=3542 u=asad n=ansible | playbook: 03_Deploystaticsite_v2.yaml
+2025-10-20 02:12:32,242 p=3571 u=asad n=ansible | PLAY [deploy multiple static websites on ubuntuserver] *************************************************************************************
+2025-10-20 02:12:32,284 p=3571 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-20 02:13:36,122 p=3571 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 02:13:36,176 p=3571 u=asad n=ansible | TASK [make sure nginx is installed] ********************************************************************************************************
+2025-10-20 02:13:54,324 p=3571 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 02:13:54,353 p=3571 u=asad n=ansible | TASK [create directory for  website1] ******************************************************************************************************
+2025-10-20 02:14:05,788 p=3571 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 02:14:05,817 p=3571 u=asad n=ansible | TASK [create directory for website2] *******************************************************************************************************
+2025-10-20 02:14:36,124 p=3571 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 02:14:36,159 p=3571 u=asad n=ansible | TASK [copy first website  in relevant dir] *************************************************************************************************
+2025-10-20 02:14:45,521 p=3571 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 02:14:45,549 p=3571 u=asad n=ansible | TASK [copy second website  in relevant dir] ************************************************************************************************
+2025-10-20 02:29:50,281 p=3571 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"msg": "Timeout (12s) waiting for privilege escalation prompt: "}
+2025-10-20 02:29:50,308 p=3571 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-20 02:29:50,309 p=3571 u=asad n=ansible | 13.233.225.159             : ok=5    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-20 02:30:38,306 p=4400 u=asad n=ansible | PLAY [deploy multiple static websites on ubuntuserver] *************************************************************************************
+2025-10-20 02:30:38,334 p=4400 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-20 02:30:59,889 p=4400 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 02:30:59,943 p=4400 u=asad n=ansible | TASK [make sure nginx is installed] ********************************************************************************************************
+2025-10-20 02:31:16,823 p=4400 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 02:31:16,851 p=4400 u=asad n=ansible | TASK [create directory for  website1] ******************************************************************************************************
+2025-10-20 02:31:33,745 p=4400 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 02:31:33,769 p=4400 u=asad n=ansible | TASK [create directory for website2] *******************************************************************************************************
+2025-10-20 02:32:02,353 p=4400 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 02:32:02,382 p=4400 u=asad n=ansible | TASK [copy first website  in relevant dir] *************************************************************************************************
+2025-10-20 02:32:28,300 p=4400 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 02:32:28,329 p=4400 u=asad n=ansible | TASK [copy second website  in relevant dir] ************************************************************************************************
+2025-10-20 02:47:54,519 p=4400 u=asad n=ansible |  [ERROR]: User interrupted execution
+
+2025-10-20 11:45:26,124 p=3702 u=asad n=ansible | PLAY [deploy multiple static websites on ubuntuserver] *************************************************************************************
+2025-10-20 11:45:26,156 p=3702 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-20 11:45:34,190 p=3702 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 11:45:34,243 p=3702 u=asad n=ansible | TASK [make sure nginx is installed] ********************************************************************************************************
+2025-10-20 11:45:40,676 p=3702 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 11:45:40,703 p=3702 u=asad n=ansible | TASK [create directory for  website1] ******************************************************************************************************
+2025-10-20 11:45:46,091 p=3702 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 11:45:46,122 p=3702 u=asad n=ansible | TASK [create directory for website2] *******************************************************************************************************
+2025-10-20 11:45:56,352 p=3702 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 11:45:56,385 p=3702 u=asad n=ansible | TASK [copy first website  in relevant dir] *************************************************************************************************
+2025-10-20 11:46:07,697 p=3702 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 11:46:07,723 p=3702 u=asad n=ansible | TASK [create nginx config file] ************************************************************************************************************
+2025-10-20 11:46:16,250 p=3702 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 11:46:16,269 p=3702 u=asad n=ansible | TASK [create nginx config file2] ***********************************************************************************************************
+2025-10-20 11:46:25,834 p=3702 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 11:46:25,858 p=3702 u=asad n=ansible | TASK [enable site1 by creating symlink] ****************************************************************************************************
+2025-10-20 11:46:30,028 p=3702 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 11:46:30,105 p=3702 u=asad n=ansible | TASK [enable site2 by creating symlink] ****************************************************************************************************
+2025-10-20 11:46:35,192 p=3702 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 11:46:35,221 p=3702 u=asad n=ansible | TASK [remove default if exist] *************************************************************************************************************
+2025-10-20 11:46:39,059 p=3702 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 11:46:39,083 p=3702 u=asad n=ansible | TASK [Remove default nginx site if exists] *************************************************************************************************
+2025-10-20 11:46:43,153 p=3702 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 11:46:43,192 p=3702 u=asad n=ansible | TASK [Test nginx configuration] ************************************************************************************************************
+2025-10-20 11:46:47,157 p=3702 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 11:46:47,192 p=3702 u=asad n=ansible | TASK [Print nginx config test output] ******************************************************************************************************
+2025-10-20 11:46:47,246 p=3702 u=asad n=ansible | ok: [13.233.225.159] => {
+    "nginx_test.stdout_lines": []
+}
+2025-10-20 11:46:47,269 p=3702 u=asad n=ansible | TASK [Reload nginx] ************************************************************************************************************************
+2025-10-20 11:46:52,897 p=3702 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 11:46:52,984 p=3702 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-20 11:46:52,985 p=3702 u=asad n=ansible | 13.233.225.159             : ok=14   changed=10   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-20 12:20:57,336 p=4702 u=asad n=ansible | playbook: 04_Deploy_portfolio_usingrepo.yaml
+2025-10-20 12:21:03,908 p=4736 u=asad n=ansible | PLAY [deploy portfolio website on ubuntuserver on nginx after cloning from github] *********************************************************
+2025-10-20 12:21:03,930 p=4736 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-20 12:21:13,466 p=4736 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 12:21:13,512 p=4736 u=asad n=ansible | TASK [ensure nginx is installed] ***********************************************************************************************************
+2025-10-20 12:21:19,160 p=4736 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 12:21:19,196 p=4736 u=asad n=ansible | TASK [ensure target dir exist which is /var/www/html/site2] ********************************************************************************
+2025-10-20 12:21:23,324 p=4736 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 12:21:23,345 p=4736 u=asad n=ansible | TASK [clone github repo in relevant dir(/var/www/html/site2)] ******************************************************************************
+2025-10-20 12:21:31,885 p=4736 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 12:21:31,899 p=4736 u=asad n=ansible | TASK [create nginx config file] ************************************************************************************************************
+2025-10-20 12:21:39,539 p=4736 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 12:21:39,574 p=4736 u=asad n=ansible | TASK [enable site2 by creating symlink] ****************************************************************************************************
+2025-10-20 12:21:43,872 p=4736 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 12:21:43,900 p=4736 u=asad n=ansible | TASK [remove default site if exist in sites_available] *************************************************************************************
+2025-10-20 12:21:48,389 p=4736 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 12:21:48,424 p=4736 u=asad n=ansible | TASK [remove default site if exist in sites_enabled] ***************************************************************************************
+2025-10-20 12:21:53,943 p=4736 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 12:21:53,968 p=4736 u=asad n=ansible | TASK [Test nginx configuration] ************************************************************************************************************
+2025-10-20 12:21:58,088 p=4736 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 12:21:58,116 p=4736 u=asad n=ansible | TASK [Print nginx config test output] ******************************************************************************************************
+2025-10-20 12:21:58,167 p=4736 u=asad n=ansible | ok: [13.233.225.159] => {
+    "nginx_test.stdout_lines": []
+}
+2025-10-20 12:21:58,203 p=4736 u=asad n=ansible | TASK [Reload nginx] ************************************************************************************************************************
+2025-10-20 12:22:07,081 p=4736 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 12:22:07,137 p=4736 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-20 12:22:07,138 p=4736 u=asad n=ansible | 13.233.225.159             : ok=11   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-22 12:22:21,036 p=4074 u=asad n=ansible | 13.233.225.159 | CHANGED | rc=0 >>
+ubuntu
+
+2025-10-22 12:22:45,903 p=4153 u=asad n=ansible | 13.233.225.159 | CHANGED | rc=0 >>
+ 07:22:45 up 8 days, 18:10,  1 user,  load average: 0.08, 0.02, 0.01
+
+2025-10-22 12:24:33,012 p=4312 u=asad n=ansible | ERROR! this task 'ping' has extra params, which is only allowed in the following modules: include_tasks, ansible.builtin.raw, ansible.builtin.add_host, meta, ansible.legacy.command, group_by, ansible.builtin.include_tasks, ansible.legacy.import_tasks, ansible.builtin.win_shell, ansible.legacy.include_role, ansible.windows.win_command, ansible.builtin.script, ansible.builtin.shell, include_role, ansible.builtin.command, ansible.builtin.import_tasks, ansible.legacy.raw, ansible.legacy.include_vars, ansible.builtin.include_role, import_tasks, win_shell, win_command, ansible.builtin.include_vars, ansible.legacy.add_host, ansible.builtin.set_fact, ansible.legacy.group_by, command, include_vars, ansible.legacy.shell, ansible.legacy.win_command, ansible.builtin.meta, ansible.windows.win_shell, ansible.builtin.group_by, ansible.legacy.include, shell, include, ansible.legacy.win_shell, ansible.legacy.include_tasks, ansible.builtin.import_role, ansible.builtin.win_command, ansible.legacy.script, raw, script, add_host, set_fact, ansible.legacy.meta, ansible.legacy.set_fact, ansible.builtin.include, import_role, ansible.legacy.import_role
+2025-10-22 12:24:47,173 p=4355 u=asad n=ansible | 13.233.225.159 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2025-10-22 12:27:04,638 p=4595 u=asad n=ansible | ERROR! this task 'apt' has extra params, which is only allowed in the following modules: ansible.legacy.group_by, ansible.builtin.meta, ansible.builtin.include_vars, ansible.legacy.command, ansible.legacy.import_role, ansible.legacy.script, ansible.builtin.add_host, ansible.legacy.include_vars, meta, ansible.builtin.include_role, command, import_role, ansible.legacy.win_shell, shell, ansible.legacy.raw, ansible.legacy.add_host, ansible.legacy.include_tasks, ansible.builtin.include_tasks, ansible.legacy.meta, include_tasks, ansible.builtin.include, ansible.builtin.raw, ansible.builtin.win_shell, include, ansible.legacy.include_role, ansible.legacy.set_fact, ansible.builtin.win_command, ansible.windows.win_shell, ansible.builtin.import_role, ansible.legacy.include, include_role, win_command, ansible.legacy.shell, raw, script, ansible.windows.win_command, ansible.builtin.shell, ansible.builtin.command, ansible.builtin.script, set_fact, ansible.builtin.group_by, add_host, ansible.legacy.win_command, include_vars, ansible.builtin.import_tasks, ansible.legacy.import_tasks, ansible.builtin.set_fact, win_shell, group_by, import_tasks
+2025-10-22 12:27:58,566 p=4634 u=asad n=ansible | 13.233.225.159 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "cache_update_time": 1761047912,
+    "cache_updated": false,
+    "changed": false
+}
+2025-10-22 12:29:22,223 p=4733 u=asad n=ansible | 13.233.225.159 | CHANGED | rc=0 >>
+git version 2.43.0
+

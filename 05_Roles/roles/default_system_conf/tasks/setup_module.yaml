@@ -1,6 +1,0 @@
-- name: show all facts
-  ansible.builtin.setup:
-
-- name: show all facts using debug
-  ansible.builtin.debug:
-    var: ansible_facts

@@ -1,0 +1,60 @@
+# have to create playbook for base system configuration ,commom co for all users are: 
+# admin user shoule present with uid 5001
+# user dojo should donot have any account on any host
+# install tree utility
+# install ntp
+# on all systems belong to prod group in inventory
+---
+  - name: base system configuration
+    hosts: prod
+    become: true
+    tasks:
+      - ansible.builtin.user:
+          name: admin
+          comment: admin user
+          uid: 5001
+          group: admin
+          state: present
+        tags:
+          - adminuser
+
+      - ansible.builtin.user:
+          name: dojo
+          state: absent
+          remove: yes
+
+      - ansible.builtin.package:
+          name: tree
+          state: present
+
+      - ansible.builtin.package:
+          name: ntp
+          state: present
+
+      - ansible.builtin.service:
+          name: ntp
+          state: started
+          enabled: yes
+        tags:
+          - ntpservice
+  - name: another play for ubuntuserver only
+    hosts: ubuntuserver
+    become: true
+    tasks:
+      - name: create a deploy_user group
+        ansible.builtin.group:
+          name: deploy_user
+          state: present
+      - name: create a deploy user with uid 5004
+        ansible.builtin.user:
+          name: deploy_user
+          comment: deploy_user
+          uid: 5004
+          group: deploy_user
+          create_home: yes
+          state: present
+
+      - name: installing git on ubuntuserver
+        ansible.builtin.package:
+          name: git
+          state: present

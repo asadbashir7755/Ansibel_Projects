@@ -1,0 +1,1494 @@
+2025-10-20 18:15:22,592 p=9988 u=asad n=ansible | ERROR! the role 'apache' was not found in /home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/05_Roles/playbooks/roles:/home/asad/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:/home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/05_Roles/playbooks
+
+The error appears to be in '/home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/05_Roles/playbooks/apache.yaml': line 6, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    roles:
+      - apache
+        ^ here
+
+2025-10-20 18:17:03,120 p=10048 u=asad n=ansible | ERROR! the role 'apache' was not found in /home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/05_Roles/playbooks/roles:/home/asad/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:/home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/05_Roles/playbooks
+
+The error appears to be in '/home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/05_Roles/playbooks/apache.yaml': line 6, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    roles:
+      - apache
+        ^ here
+
+2025-10-20 18:17:41,103 p=10106 u=asad n=ansible | playbook: apache.yaml
+2025-10-20 18:17:46,444 p=10129 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-20 18:17:46,479 p=10129 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-20 18:18:10,478 p=10129 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 18:18:10,526 p=10129 u=asad n=ansible | TASK [apache : install apache on server] ***************************************************************************************************
+2025-10-20 18:18:24,161 p=10129 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"changed": false, "msg": "value of state must be one of: absent, build-dep, fixed, latest, present, got: installed"}
+2025-10-20 18:18:24,175 p=10129 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-20 18:18:24,177 p=10129 u=asad n=ansible | 13.233.225.159             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-20 18:19:32,360 p=10328 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-20 18:19:32,383 p=10328 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-20 18:19:50,933 p=10328 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 18:19:50,966 p=10328 u=asad n=ansible | TASK [apache : install apache on server] ***************************************************************************************************
+2025-10-20 18:19:59,548 p=10328 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"changed": false, "msg": "No package matching 'apache' is available"}
+2025-10-20 18:19:59,555 p=10328 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-20 18:19:59,557 p=10328 u=asad n=ansible | 13.233.225.159             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-20 18:20:54,535 p=10502 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-20 18:20:54,559 p=10502 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-20 18:21:08,188 p=10502 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 18:21:08,235 p=10502 u=asad n=ansible | TASK [apache : install apache on server] ***************************************************************************************************
+2025-10-20 18:21:35,705 p=10502 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 18:21:35,734 p=10502 u=asad n=ansible | TASK [apache : make sure apache service is running] ****************************************************************************************
+2025-10-20 18:22:03,731 p=10502 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"changed": false, "msg": "Unable to start service apache2: Job for apache2.service failed because the control process exited with error code.\nSee \"systemctl status apache2.service\" and \"journalctl -xeu apache2.service\" for details.\n"}
+2025-10-20 18:22:03,744 p=10502 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-20 18:22:03,745 p=10502 u=asad n=ansible | 13.233.225.159             : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-20 18:44:50,715 p=10968 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-20 18:44:50,735 p=10968 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-20 18:45:01,669 p=10968 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 18:45:01,716 p=10968 u=asad n=ansible | TASK [apache : install apache on server] ***************************************************************************************************
+2025-10-20 18:45:08,950 p=10968 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 18:45:08,981 p=10968 u=asad n=ansible | TASK [apache : make sure apache service is running] ****************************************************************************************
+2025-10-20 18:45:17,967 p=10968 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 18:45:17,997 p=10968 u=asad n=ansible | TASK [apache : add port no in apache config file] ******************************************************************************************
+2025-10-20 18:45:22,715 p=10968 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"changed": false, "msg": "Destination /etc/apache2/ports.config does not exist !", "rc": 257}
+2025-10-20 18:45:22,720 p=10968 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-20 18:45:22,722 p=10968 u=asad n=ansible | 13.233.225.159             : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-20 18:46:45,023 p=11216 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-20 18:46:45,047 p=11216 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-20 18:46:55,959 p=11216 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 18:46:56,003 p=11216 u=asad n=ansible | TASK [apache : install apache on server] ***************************************************************************************************
+2025-10-20 18:47:04,585 p=11216 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 18:47:04,612 p=11216 u=asad n=ansible | TASK [apache : make sure apache service is running] ****************************************************************************************
+2025-10-20 18:47:16,385 p=11216 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 18:47:16,411 p=11216 u=asad n=ansible | TASK [apache : add port no in apache config file] ******************************************************************************************
+2025-10-20 18:47:23,811 p=11216 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 18:47:23,839 p=11216 u=asad n=ansible | TASK [apache : comment out port 80 line] ***************************************************************************************************
+2025-10-20 18:47:31,513 p=11216 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 18:47:31,540 p=11216 u=asad n=ansible | TASK [apache : update vhosts file so that apache listen on that port] **********************************************************************
+2025-10-20 18:47:48,891 p=11216 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 18:47:48,950 p=11216 u=asad n=ansible | RUNNING HANDLER [apache : restart apache] **************************************************************************************************
+2025-10-20 18:48:42,981 p=11216 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 18:48:43,007 p=11216 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-20 18:48:43,008 p=11216 u=asad n=ansible | 13.233.225.159             : ok=7    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-20 19:14:23,510 p=11891 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-20 19:14:23,535 p=11891 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-20 19:15:24,946 p=11891 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 19:15:24,993 p=11891 u=asad n=ansible | TASK [apache : install apache on server] ***************************************************************************************************
+2025-10-20 19:15:32,668 p=11891 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 19:15:32,699 p=11891 u=asad n=ansible | TASK [apache : make sure apache service is running] ****************************************************************************************
+2025-10-20 19:15:41,683 p=11891 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 19:15:41,710 p=11891 u=asad n=ansible | TASK [apache : add port no in apache config file] ******************************************************************************************
+2025-10-20 19:15:48,254 p=11891 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 19:15:48,281 p=11891 u=asad n=ansible | TASK [apache : comment out port 80 line] ***************************************************************************************************
+2025-10-20 19:15:55,300 p=11891 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-20 19:15:55,330 p=11891 u=asad n=ansible | TASK [apache : update vhosts file so that apache listen on that port] **********************************************************************
+2025-10-20 19:16:01,970 p=11891 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-20 19:16:02,040 p=11891 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-20 19:16:02,041 p=11891 u=asad n=ansible | 13.233.225.159             : ok=6    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-21 13:01:53,596 p=13775 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 13:01:53,655 p=13775 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-21 13:02:52,579 p=13775 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 13:02:52,686 p=13775 u=asad n=ansible | TASK [apache : install apache on server] ***************************************************************************************************
+2025-10-21 13:03:22,195 p=13775 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 13:03:22,214 p=13775 u=asad n=ansible | TASK [apache : make sure apache service is running] ****************************************************************************************
+2025-10-21 13:03:52,713 p=13775 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 13:03:52,753 p=13775 u=asad n=ansible | TASK [apache : comment out port 80 line] ***************************************************************************************************
+2025-10-21 13:04:42,702 p=13775 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-21 13:04:42,753 p=13775 u=asad n=ansible | TASK [apache : add port no in apache config file] ******************************************************************************************
+2025-10-21 13:05:05,692 p=13775 u=asad n=ansible |  [ERROR]: User interrupted execution
+
+2025-10-21 13:05:12,414 p=14145 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 13:05:12,429 p=14145 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-21 13:05:23,582 p=14145 u=asad n=ansible |  [ERROR]: User interrupted execution
+
+2025-10-21 13:05:56,848 p=14271 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 13:05:56,888 p=14271 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-21 13:05:56,906 p=14271 u=asad n=ansible |  [ERROR]: No matching task "apache: comment out port 80 line" found. Note: --start-at-task can only follow static includes.
+
+2025-10-21 13:06:07,868 p=14324 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 13:06:08,047 p=14324 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-21 13:06:37,205 p=14324 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 13:06:37,318 p=14324 u=asad n=ansible | TASK [apache : comment out port 80 line] ***************************************************************************************************
+2025-10-21 13:07:05,370 p=14324 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 13:07:05,465 p=14324 u=asad n=ansible | TASK [apache : add port no in apache config file] ******************************************************************************************
+2025-10-21 13:07:27,403 p=14324 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-21 13:07:27,461 p=14324 u=asad n=ansible | TASK [apache : update vhosts file so that apache listen on that port] **********************************************************************
+2025-10-21 13:07:44,029 p=14324 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 13:07:44,085 p=14324 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-21 13:07:44,086 p=14324 u=asad n=ansible | 13.233.225.159             : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-21 13:30:23,125 p=14977 u=asad n=ansible | ERROR! conflicting action statements: ansible.builtin.replace, path
+
+The error appears to be in '/home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/05_Roles/roles/apache/tasks/config.yaml': line 2, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+  - name: Comment out only the exact 'Listen 80' line if not already commented
+    ^ here
+
+2025-10-21 13:30:44,824 p=15032 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 13:30:44,850 p=15032 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-21 13:30:44,851 p=15032 u=asad n=ansible |  [ERROR]: No matching task "comment out port 80 line" found. Note: --start-at-task can only follow static includes.
+
+2025-10-21 13:31:00,383 p=15071 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 13:31:00,410 p=15071 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-21 13:32:26,537 p=15071 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 13:32:26,552 p=15071 u=asad n=ansible | TASK [apache : Comment out only the exact 'Listen 80' line if not already commented] *******************************************************
+2025-10-21 13:33:31,798 p=15071 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 13:33:31,826 p=15071 u=asad n=ansible | TASK [apache : add port no in apache config file] ******************************************************************************************
+2025-10-21 13:34:37,177 p=15071 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 13:34:37,206 p=15071 u=asad n=ansible | TASK [apache : update vhosts file so that apache listen on that port] **********************************************************************
+2025-10-21 13:35:26,447 p=15071 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 13:35:26,526 p=15071 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-21 13:35:26,527 p=15071 u=asad n=ansible | 13.233.225.159             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-21 14:22:33,251 p=15563 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 14:22:33,318 p=15563 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-21 14:23:26,453 p=15563 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 14:23:26,495 p=15563 u=asad n=ansible | TASK [apache : Comment out only the exact 'Listen 80' line if not already commented] *******************************************************
+2025-10-21 14:24:13,813 p=15563 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"msg": "Timeout (12s) waiting for privilege escalation prompt: "}
+2025-10-21 14:24:13,828 p=15563 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-21 14:24:13,869 p=15563 u=asad n=ansible | 13.233.225.159             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-21 14:24:35,201 p=15749 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 14:24:35,271 p=15749 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-21 14:25:30,871 p=15749 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 14:25:30,953 p=15749 u=asad n=ansible | TASK [apache : Comment out only the exact 'Listen 80' line if not already commented] *******************************************************
+2025-10-21 14:25:56,368 p=15749 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-21 14:25:56,413 p=15749 u=asad n=ansible | TASK [apache : add port no in apache config file] ******************************************************************************************
+2025-10-21 14:26:18,092 p=15749 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-21 14:26:18,139 p=15749 u=asad n=ansible | TASK [apache : update vhosts file so that apache listen on that port] **********************************************************************
+2025-10-21 14:26:48,567 p=15749 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 14:26:48,623 p=15749 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-21 14:26:48,623 p=15749 u=asad n=ansible | 13.233.225.159             : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-21 14:27:00,255 p=16062 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 14:27:00,387 p=16062 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-21 14:27:38,987 p=16062 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 14:27:39,099 p=16062 u=asad n=ansible | TASK [apache : Comment out only the exact 'Listen 80' line if not already commented] *******************************************************
+2025-10-21 14:27:59,659 p=16062 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 14:27:59,717 p=16062 u=asad n=ansible | TASK [apache : add port no in apache config file] ******************************************************************************************
+2025-10-21 14:28:28,544 p=16062 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 14:28:28,758 p=16062 u=asad n=ansible | TASK [apache : update vhosts file so that apache listen on that port] **********************************************************************
+2025-10-21 14:28:49,161 p=16062 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 14:28:49,794 p=16062 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-21 14:28:49,799 p=16062 u=asad n=ansible | 13.233.225.159             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-21 16:16:58,897 p=3569 u=asad n=ansible | playbook: apache.yaml
+2025-10-21 16:17:16,799 p=3611 u=asad n=ansible | ERROR! the playbook: check could not be found
+2025-10-21 16:17:29,411 p=3657 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 16:17:29,454 p=3657 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-21 16:18:22,366 p=3657 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:18:22,399 p=3657 u=asad n=ansible | TASK [apache : install apache on server] ***************************************************************************************************
+2025-10-21 16:19:19,480 p=3657 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:19:19,516 p=3657 u=asad n=ansible | TASK [apache : make sure apache service is running] ****************************************************************************************
+2025-10-21 16:19:55,199 p=3657 u=asad n=ansible |  [ERROR]: User interrupted execution
+
+2025-10-21 16:19:58,550 p=3858 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 16:19:58,566 p=3858 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-21 16:20:24,868 p=3858 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:20:24,910 p=3858 u=asad n=ansible | TASK [apache : install apache on server] ***************************************************************************************************
+2025-10-21 16:20:31,208 p=3858 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:20:31,236 p=3858 u=asad n=ansible | TASK [apache : make sure apache service is running] ****************************************************************************************
+2025-10-21 16:20:44,331 p=3858 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:20:44,361 p=3858 u=asad n=ansible | TASK [apache : Comment out only the exact 'Listen 80' line if not already commented] *******************************************************
+2025-10-21 16:20:48,580 p=3858 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:20:48,607 p=3858 u=asad n=ansible | TASK [apache : add port no in apache config file] ******************************************************************************************
+2025-10-21 16:20:53,048 p=3858 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:20:53,074 p=3858 u=asad n=ansible | TASK [apache : update vhosts file so that apache listen on that port] **********************************************************************
+2025-10-21 16:20:59,918 p=3858 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:20:59,953 p=3858 u=asad n=ansible | TASK [apache : create document root for all websites] **************************************************************************************
+2025-10-21 16:21:04,375 p=3858 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'apache_site1', 'server_name': 'apache_site1.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'})
+2025-10-21 16:21:08,159 p=3858 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'apache_site2', 'server_name': 'apache_site2.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'})
+2025-10-21 16:21:08,191 p=3858 u=asad n=ansible | TASK [apache : create  apache config file  for each websites] ******************************************************************************
+2025-10-21 16:21:09,103 p=3858 u=asad n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: 'apache_listen_port' is undefined. 'apache_listen_port' is undefined
+2025-10-21 16:21:09,111 p=3858 u=asad n=ansible | failed: [13.233.225.159] (item={'name': 'apache_site1', 'server_name': 'apache_site1.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'}) => {"ansible_loop_var": "item", "changed": false, "item": {"doc_root": "/var/www/apache", "name": "apache_site1", "repo_link": "https://github.com/asadbashir7755/asadbashir-portfolio.com.git", "server_name": "apache_site1.local"}, "msg": "AnsibleUndefinedVariable: 'apache_listen_port' is undefined. 'apache_listen_port' is undefined"}
+2025-10-21 16:21:10,106 p=3858 u=asad n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: 'apache_listen_port' is undefined. 'apache_listen_port' is undefined
+2025-10-21 16:21:10,107 p=3858 u=asad n=ansible | failed: [13.233.225.159] (item={'name': 'apache_site2', 'server_name': 'apache_site2.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'}) => {"ansible_loop_var": "item", "changed": false, "item": {"doc_root": "/var/www/apache", "name": "apache_site2", "repo_link": "https://github.com/asadbashir7755/asadbashir-portfolio.com.git", "server_name": "apache_site2.local"}, "msg": "AnsibleUndefinedVariable: 'apache_listen_port' is undefined. 'apache_listen_port' is undefined"}
+2025-10-21 16:21:10,120 p=3858 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-21 16:21:10,122 p=3858 u=asad n=ansible | 13.233.225.159             : ok=7    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-21 16:22:47,032 p=4237 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 16:22:47,062 p=4237 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-21 16:23:18,320 p=4237 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:23:18,371 p=4237 u=asad n=ansible | TASK [apache : install apache on server] ***************************************************************************************************
+2025-10-21 16:23:53,737 p=4237 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:23:53,766 p=4237 u=asad n=ansible | TASK [apache : make sure apache service is running] ****************************************************************************************
+2025-10-21 16:24:14,876 p=4237 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:24:14,906 p=4237 u=asad n=ansible | TASK [apache : Comment out only the exact 'Listen 80' line if not already commented] *******************************************************
+2025-10-21 16:24:23,809 p=4237 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:24:23,839 p=4237 u=asad n=ansible | TASK [apache : add port no in apache config file] ******************************************************************************************
+2025-10-21 16:24:31,013 p=4237 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:24:31,046 p=4237 u=asad n=ansible | TASK [apache : update vhosts file so that apache listen on that port] **********************************************************************
+2025-10-21 16:24:57,054 p=4237 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:24:57,078 p=4237 u=asad n=ansible | TASK [apache : create document root for all websites] **************************************************************************************
+2025-10-21 16:25:05,419 p=4237 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'apache_site1', 'server_name': 'apache_site1.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'})
+2025-10-21 16:25:11,750 p=4237 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'apache_site2', 'server_name': 'apache_site2.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'})
+2025-10-21 16:25:11,776 p=4237 u=asad n=ansible | TASK [apache : create  apache config file  for each websites] ******************************************************************************
+2025-10-21 16:25:22,444 p=4237 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'apache_site1', 'server_name': 'apache_site1.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'})
+2025-10-21 16:25:27,169 p=4237 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'apache_site2', 'server_name': 'apache_site2.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'})
+2025-10-21 16:25:27,218 p=4237 u=asad n=ansible | TASK [apache : Enable virtual hosts] *******************************************************************************************************
+2025-10-21 16:25:37,379 p=4237 u=asad n=ansible | failed: [13.233.225.159] (item={'name': 'apache_site1', 'server_name': 'apache_site1.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'}) => {"ansible_loop_var": "item", "changed": false, "item": {"doc_root": "/var/www/apache", "name": "apache_site1", "repo_link": "https://github.com/asadbashir7755/asadbashir-portfolio.com.git", "server_name": "apache_site1.local"}, "msg": "src file does not exist, use \"force=yes\" if you really want to create the link: /etc/apache2/sites-available/apache_site1.conf", "path": "/etc/apache2/sites-enabled/apache_site1.conf", "src": "/etc/apache2/sites-available/apache_site1.conf"}
+2025-10-21 16:26:45,211 p=4237 u=asad n=ansible | failed: [13.233.225.159] (item={'name': 'apache_site2', 'server_name': 'apache_site2.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'}) => {"ansible_loop_var": "item", "changed": false, "item": {"doc_root": "/var/www/apache", "name": "apache_site2", "repo_link": "https://github.com/asadbashir7755/asadbashir-portfolio.com.git", "server_name": "apache_site2.local"}, "msg": "src file does not exist, use \"force=yes\" if you really want to create the link: /etc/apache2/sites-available/apache_site2.conf", "path": "/etc/apache2/sites-enabled/apache_site2.conf", "src": "/etc/apache2/sites-available/apache_site2.conf"}
+2025-10-21 16:26:45,221 p=4237 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-21 16:26:45,222 p=4237 u=asad n=ansible | 13.233.225.159             : ok=8    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-21 16:34:05,363 p=4964 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 16:34:05,406 p=4964 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-21 16:35:27,436 p=4964 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:35:27,523 p=4964 u=asad n=ansible | TASK [apache : install apache on server] ***************************************************************************************************
+2025-10-21 16:36:30,284 p=4964 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:36:30,295 p=4964 u=asad n=ansible | TASK [apache : make sure apache service is running] ****************************************************************************************
+2025-10-21 16:37:19,797 p=4964 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:37:19,834 p=4964 u=asad n=ansible | TASK [apache : Comment out only the exact 'Listen 80' line if not already commented] *******************************************************
+2025-10-21 16:37:47,983 p=4964 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:37:48,013 p=4964 u=asad n=ansible | TASK [apache : add port no in apache config file] ******************************************************************************************
+2025-10-21 16:38:27,386 p=4964 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:38:27,422 p=4964 u=asad n=ansible | TASK [apache : update vhosts file so that apache listen on that port] **********************************************************************
+2025-10-21 16:38:49,429 p=4964 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:38:49,441 p=4964 u=asad n=ansible | TASK [apache : create document root for all websites] **************************************************************************************
+2025-10-21 16:39:01,546 p=4964 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'apache_site1', 'server_name': 'apache_site1.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'})
+2025-10-21 16:39:14,506 p=4964 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'apache_site2', 'server_name': 'apache_site2.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'})
+2025-10-21 16:39:14,539 p=4964 u=asad n=ansible | TASK [apache : create  apache config file  for each websites] ******************************************************************************
+2025-10-21 16:39:56,066 p=4964 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'apache_site1', 'server_name': 'apache_site1.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'})
+2025-10-21 16:40:47,365 p=4964 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'apache_site2', 'server_name': 'apache_site2.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'})
+2025-10-21 16:40:47,421 p=4964 u=asad n=ansible | TASK [apache : Enable virtual hosts] *******************************************************************************************************
+2025-10-21 16:41:00,959 p=4964 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'apache_site1', 'server_name': 'apache_site1.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'})
+2025-10-21 16:41:33,394 p=4964 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"msg": "Timeout (12s) waiting for privilege escalation prompt: "}
+2025-10-21 16:41:33,402 p=4964 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-21 16:41:33,403 p=4964 u=asad n=ansible | 13.233.225.159             : ok=8    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-21 16:42:09,964 p=5754 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 16:42:10,014 p=5754 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-21 16:43:15,661 p=5754 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"msg": "Timeout (12s) waiting for privilege escalation prompt: "}
+2025-10-21 16:43:15,672 p=5754 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-21 16:43:15,673 p=5754 u=asad n=ansible | 13.233.225.159             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-21 16:43:39,047 p=5845 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 16:43:39,087 p=5845 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-21 16:44:57,663 p=5845 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"msg": "Timeout (12s) waiting for privilege escalation prompt: "}
+2025-10-21 16:44:57,683 p=5845 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-21 16:44:57,690 p=5845 u=asad n=ansible | 13.233.225.159             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-21 16:45:36,692 p=5931 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 16:45:36,734 p=5931 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-21 16:46:20,230 p=5931 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:46:20,274 p=5931 u=asad n=ansible | TASK [apache : Enable virtual hosts] *******************************************************************************************************
+2025-10-21 16:47:21,889 p=5931 u=asad n=ansible | ok: [13.233.225.159] => (item={'name': 'apache_site1', 'server_name': 'apache_site1.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'})
+2025-10-21 16:48:48,351 p=5931 u=asad n=ansible | ok: [13.233.225.159] => (item={'name': 'apache_site2', 'server_name': 'apache_site2.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'})
+2025-10-21 16:48:48,397 p=5931 u=asad n=ansible | TASK [apache : make sure git is installed] *************************************************************************************************
+2025-10-21 16:49:34,348 p=5931 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 16:49:34,436 p=5931 u=asad n=ansible | TASK [apache : clone repo in   relevant website folder] ************************************************************************************
+2025-10-21 16:50:03,262 p=5931 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'apache_site1', 'server_name': 'apache_site1.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'})
+2025-10-21 16:50:45,538 p=5931 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'apache_site2', 'server_name': 'apache_site2.local', 'doc_root': '/var/www/apache', 'repo_link': 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'})
+2025-10-21 16:50:45,649 p=5931 u=asad n=ansible | RUNNING HANDLER [apache : restart apache] **************************************************************************************************
+2025-10-21 16:51:35,372 p=5931 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-21 16:51:35,584 p=5931 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-21 16:51:35,588 p=5931 u=asad n=ansible | 13.233.225.159             : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-21 18:13:59,495 p=7595 u=asad n=ansible | playbook: apache.yaml
+2025-10-21 18:15:14,898 p=7630 u=asad n=ansible | PLAY [apache configuration on ubuntu server] ***********************************************************************************************
+2025-10-21 18:15:14,954 p=7630 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-21 18:16:45,670 p=7630 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 18:16:45,818 p=7630 u=asad n=ansible | TASK [default_system_conf : create a deploy_user group] ************************************************************************************
+2025-10-21 18:17:17,356 p=7630 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 18:17:17,373 p=7630 u=asad n=ansible | TASK [default_system_conf : create a deploy user with uid 5004] ****************************************************************************
+2025-10-21 18:17:58,785 p=7630 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-21 18:17:58,940 p=7630 u=asad n=ansible | TASK [apache : install apache on server] ***************************************************************************************************
+2025-10-21 18:18:47,767 p=7630 u=asad n=ansible |  [ERROR]: User interrupted execution
+
+2025-10-22 13:59:57,243 p=5778 u=asad n=ansible | playbook: apache.yaml
+2025-10-22 14:00:06,919 p=5811 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 14:00:06,982 p=5811 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 14:00:17,460 p=5811 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 14:00:17,485 p=5811 u=asad n=ansible | TASK [default_system_conf : create users on target server] *********************************************************************************
+2025-10-22 14:00:17,524 p=5811 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'list object' has no attribute 'name'. 'list object' has no attribute 'name'\n\nThe error appears to be in '/home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/05_Roles/roles/default_system_conf/tasks/main.yml': line 1, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: create users on target server\n  ^ here\n"}
+2025-10-22 14:00:17,525 p=5811 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 14:00:17,526 p=5811 u=asad n=ansible | 13.233.225.159             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-22 14:03:34,950 p=5934 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 14:03:34,987 p=5934 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 14:03:55,094 p=5934 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 14:03:55,146 p=5934 u=asad n=ansible | TASK [default_system_conf : create users on target server] *********************************************************************************
+2025-10-22 14:03:55,216 p=5934 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'list object' has no attribute 'name'. 'list object' has no attribute 'name'\n\nThe error appears to be in '/home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/05_Roles/roles/default_system_conf/tasks/main.yml': line 1, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: create users on target server\n  ^ here\n"}
+2025-10-22 14:03:55,224 p=5934 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 14:03:55,225 p=5934 u=asad n=ansible | 13.233.225.159             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-22 14:06:02,916 p=6071 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 14:06:02,996 p=6071 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 14:06:13,197 p=6071 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 14:06:13,270 p=6071 u=asad n=ansible | TASK [default_system_conf : create users on target server] *********************************************************************************
+2025-10-22 14:06:13,408 p=6071 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'list object' has no attribute 'name'. 'list object' has no attribute 'name'\n\nThe error appears to be in '/home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/05_Roles/roles/default_system_conf/tasks/main.yml': line 1, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- name: create users on target server\n  ^ here\n"}
+2025-10-22 14:06:13,421 p=6071 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 14:06:13,422 p=6071 u=asad n=ansible | 13.233.225.159             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-22 14:07:45,713 p=6168 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 14:07:45,748 p=6168 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 14:07:56,133 p=6168 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 14:07:56,200 p=6168 u=asad n=ansible | TASK [default_system_conf : create users on target server] *********************************************************************************
+2025-10-22 14:08:03,129 p=6168 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'asad', 'comment': 'asad bashir ', 'group': 'asad', 'groups': 'asad,bilawal', 'create_home': True, 'append': True})
+2025-10-22 14:08:07,517 p=6168 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'bilawal', 'comment': 'bilawal ali faiz', 'group': 'bilawal', 'groups': 'bilawal,asad', 'create_home': True, 'append': True})
+2025-10-22 14:08:16,219 p=6168 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'sheryar', 'comment': 'sheryar ahsen qamar', 'group': 'sheryar', 'create_home': True, 'append': False})
+2025-10-22 14:08:16,277 p=6168 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 14:08:16,278 p=6168 u=asad n=ansible | 13.233.225.159             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-22 14:13:53,557 p=6407 u=asad n=ansible | ERROR! the playbook: apache.yam could not be found
+2025-10-22 14:13:58,430 p=6433 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 14:13:58,467 p=6433 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 14:14:10,762 p=6433 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 14:14:10,832 p=6433 u=asad n=ansible | TASK [default_system_conf : create users on target server] *********************************************************************************
+2025-10-22 14:14:16,460 p=6433 u=asad n=ansible | failed: [13.233.225.159] (item={'name': 'asad', 'comment': 'asad bashir ', 'group': 'asad', 'groups': 'asad,bilawal', 'create_home': True, 'append': True}) => {"ansible_loop_var": "item", "changed": false, "item": {"append": true, "comment": "asad bashir ", "create_home": true, "group": "asad", "groups": "asad,bilawal", "name": "asad"}, "msg": "Group asad does not exist"}
+2025-10-22 14:14:21,979 p=6433 u=asad n=ansible | failed: [13.233.225.159] (item={'name': 'bilawal', 'comment': 'bilawal ali faiz', 'group': 'bilawal', 'groups': 'bilawal,asad', 'create_home': True, 'append': True}) => {"ansible_loop_var": "item", "changed": false, "item": {"append": true, "comment": "bilawal ali faiz", "create_home": true, "group": "bilawal", "groups": "bilawal,asad", "name": "bilawal"}, "msg": "Group bilawal does not exist"}
+2025-10-22 14:14:27,717 p=6433 u=asad n=ansible | failed: [13.233.225.159] (item={'name': 'sheryar', 'comment': 'sheryar ahsen qamar', 'group': 'sheryar', 'create_home': True, 'append': False}) => {"ansible_loop_var": "item", "changed": false, "item": {"append": false, "comment": "sheryar ahsen qamar", "create_home": true, "group": "sheryar", "name": "sheryar"}, "msg": "Group sheryar does not exist"}
+2025-10-22 14:14:27,736 p=6433 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 14:14:27,736 p=6433 u=asad n=ansible | 13.233.225.159             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-22 14:14:46,337 p=6639 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 14:14:46,400 p=6639 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 14:15:10,097 p=6639 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 14:15:10,168 p=6639 u=asad n=ansible | TASK [default_system_conf : create users on target server] *********************************************************************************
+2025-10-22 14:15:19,629 p=6639 u=asad n=ansible | failed: [13.233.225.159] (item={'name': 'asad', 'comment': 'asad bashir ', 'group': 'asad', 'groups': 'asad,bilawal', 'create_home': True, 'append': True}) => {"ansible_loop_var": "item", "changed": false, "item": {"append": true, "comment": "asad bashir ", "create_home": true, "group": "asad", "groups": "asad,bilawal", "name": "asad"}, "msg": "Group asad does not exist"}
+2025-10-22 14:15:29,468 p=6639 u=asad n=ansible | failed: [13.233.225.159] (item={'name': 'bilawal', 'comment': 'bilawal ali faiz', 'group': 'bilawal', 'groups': 'bilawal,asad', 'create_home': True, 'append': True}) => {"ansible_loop_var": "item", "changed": false, "item": {"append": true, "comment": "bilawal ali faiz", "create_home": true, "group": "bilawal", "groups": "bilawal,asad", "name": "bilawal"}, "msg": "Group bilawal does not exist"}
+2025-10-22 14:15:34,627 p=6639 u=asad n=ansible | failed: [13.233.225.159] (item={'name': 'sheryar', 'comment': 'sheryar ahsen qamar', 'group': 'sheryar', 'create_home': True, 'append': False}) => {"ansible_loop_var": "item", "changed": false, "item": {"append": false, "comment": "sheryar ahsen qamar", "create_home": true, "group": "sheryar", "name": "sheryar"}, "msg": "Group sheryar does not exist"}
+2025-10-22 14:15:34,639 p=6639 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 14:15:34,641 p=6639 u=asad n=ansible | 13.233.225.159             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-22 14:24:38,607 p=6925 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 14:24:38,649 p=6925 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 14:24:54,694 p=6925 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 14:24:54,823 p=6925 u=asad n=ansible | TASK [default_system_conf : Create all required groups (primary + secondary)] **************************************************************
+2025-10-22 14:24:55,045 p=6925 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"msg": "'dict object' has no attribute 'groups'. 'dict object' has no attribute 'groups'"}
+2025-10-22 14:24:55,058 p=6925 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 14:24:55,060 p=6925 u=asad n=ansible | 13.233.225.159             : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-22 14:26:42,311 p=7051 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 14:26:42,361 p=7051 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 14:26:57,583 p=7051 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 14:26:57,607 p=7051 u=asad n=ansible | TASK [default_system_conf : Create all required groups (primary + secondary)] **************************************************************
+2025-10-22 14:27:10,110 p=7051 u=asad n=ansible | changed: [13.233.225.159] => (item=asad)
+2025-10-22 14:27:23,093 p=7051 u=asad n=ansible | changed: [13.233.225.159] => (item=bilawal)
+2025-10-22 14:27:29,413 p=7051 u=asad n=ansible | changed: [13.233.225.159] => (item=sheryar)
+2025-10-22 14:27:33,528 p=7051 u=asad n=ansible | ok: [13.233.225.159] => (item=asad)
+2025-10-22 14:27:38,436 p=7051 u=asad n=ansible | ok: [13.233.225.159] => (item=bilawal)
+2025-10-22 14:27:38,535 p=7051 u=asad n=ansible | TASK [default_system_conf : create users on target server] *********************************************************************************
+2025-10-22 14:27:46,231 p=7051 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'asad', 'comment': 'asad bashir ', 'group': 'asad', 'groups': 'asad,bilawal', 'create_home': True, 'append': True})
+2025-10-22 14:27:50,737 p=7051 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'bilawal', 'comment': 'bilawal ali faiz', 'group': 'bilawal', 'groups': 'bilawal,asad', 'create_home': True, 'append': True})
+2025-10-22 14:27:55,386 p=7051 u=asad n=ansible | changed: [13.233.225.159] => (item={'name': 'sheryar', 'comment': 'sheryar ahsen qamar', 'group': 'sheryar', 'create_home': True, 'append': False})
+2025-10-22 14:27:55,608 p=7051 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 14:27:55,609 p=7051 u=asad n=ansible | 13.233.225.159             : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-22 15:15:29,822 p=3641 u=asad n=ansible | ERROR! this task 'ansible.builtin.import_task' has extra params, which is only allowed in the following modules: ansible.legacy.add_host, ansible.builtin.shell, set_fact, ansible.builtin.import_tasks, ansible.legacy.include, ansible.legacy.meta, ansible.builtin.script, ansible.legacy.import_tasks, ansible.builtin.include_vars, ansible.legacy.shell, ansible.builtin.win_shell, include_role, ansible.legacy.include_tasks, meta, include, ansible.legacy.command, ansible.builtin.meta, ansible.legacy.win_shell, win_command, include_vars, ansible.builtin.win_command, group_by, ansible.legacy.raw, ansible.builtin.include, ansible.builtin.command, ansible.builtin.set_fact, import_role, ansible.legacy.set_fact, shell, ansible.builtin.group_by, ansible.legacy.group_by, ansible.legacy.win_command, import_tasks, ansible.legacy.include_vars, raw, ansible.builtin.include_role, ansible.windows.win_command, script, ansible.builtin.include_tasks, ansible.builtin.raw, ansible.windows.win_shell, win_shell, include_tasks, ansible.legacy.import_role, ansible.legacy.include_role, add_host, command, ansible.legacy.script, ansible.builtin.add_host, ansible.builtin.import_role
+
+The error appears to be in '/home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/05_Roles/roles/default_system_conf/tasks/main.yml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: imported user creation task
+  ^ here
+
+2025-10-22 15:16:30,528 p=3673 u=asad n=ansible | ERROR! this task 'ansible.builtin.import_task' has extra params, which is only allowed in the following modules: ansible.builtin.include_vars, command, include_role, ansible.legacy.shell, ansible.builtin.add_host, ansible.legacy.add_host, ansible.legacy.meta, ansible.builtin.shell, ansible.legacy.script, ansible.builtin.raw, win_command, ansible.windows.win_command, ansible.builtin.include_tasks, ansible.legacy.import_tasks, ansible.builtin.set_fact, shell, include, import_role, ansible.builtin.import_role, add_host, ansible.legacy.win_shell, ansible.builtin.command, script, ansible.legacy.import_role, win_shell, ansible.legacy.raw, ansible.legacy.set_fact, group_by, include_vars, ansible.builtin.win_shell, ansible.builtin.include, ansible.legacy.include_tasks, ansible.legacy.command, ansible.builtin.include_role, import_tasks, ansible.legacy.include_vars, ansible.legacy.win_command, ansible.builtin.win_command, include_tasks, ansible.builtin.group_by, ansible.windows.win_shell, ansible.legacy.include, ansible.builtin.meta, ansible.builtin.script, ansible.legacy.include_role, raw, ansible.legacy.group_by, ansible.builtin.import_tasks, set_fact, meta
+
+The error appears to be in '/home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/05_Roles/roles/default_system_conf/tasks/main.yml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: imported user creation task
+  ^ here
+
+2025-10-22 15:17:41,555 p=3706 u=asad n=ansible | ERROR! Unable to retrieve file contents
+Could not find or access '/home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/05_Roles/playbooks/install' on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+2025-10-22 15:17:58,259 p=3736 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 15:17:58,296 p=3736 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 15:18:09,738 p=3736 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 15:18:09,775 p=3736 u=asad n=ansible | TASK [default_system_conf : check nginx on server after checking if not installed] *********************************************************
+2025-10-22 15:18:14,880 p=3736 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-22 15:18:14,920 p=3736 u=asad n=ansible | TASK [default_system_conf : install  nginx if not installed] *******************************************************************************
+2025-10-22 15:18:14,978 p=3736 u=asad n=ansible | skipping: [13.233.225.159]
+2025-10-22 15:18:15,053 p=3736 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 15:18:15,054 p=3736 u=asad n=ansible | 13.233.225.159             : ok=2    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2025-10-22 15:28:19,071 p=3914 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 15:28:19,092 p=3914 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 15:28:19,094 p=3914 u=asad n=ansible |  [ERROR]: No matching task "check nginx " found. Note: --start-at-task can only follow static includes.
+
+2025-10-22 15:29:15,390 p=3990 u=asad n=ansible | ERROR! Unable to retrieve file contents
+Could not find or access '/home/asad/Desktop/Asad/DevOpS-Practice/AnsibleUdemyCourse/ansiblepractice_1.1/05_Roles/playbooks/resgisters.yaml' on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+2025-10-22 15:29:44,331 p=4054 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 15:29:44,353 p=4054 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 15:29:44,354 p=4054 u=asad n=ansible |  [ERROR]: No matching task "check nginx " found. Note: --start-at-task can only follow static includes.
+
+2025-10-22 15:31:00,634 p=4098 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 15:31:00,666 p=4098 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 15:31:11,428 p=4098 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 15:31:11,457 p=4098 u=asad n=ansible | TASK [default_system_conf : check nginx] ***************************************************************************************************
+2025-10-22 15:31:18,761 p=4098 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-22 15:31:18,795 p=4098 u=asad n=ansible | TASK [default_system_conf : print what task is returning] **********************************************************************************
+2025-10-22 15:31:18,890 p=4098 u=asad n=ansible | ok: [13.233.225.159] => {
+    "nginx_check": {
+        "changed": true,
+        "cmd": [
+            "nginx",
+            "-v"
+        ],
+        "delta": "0:00:00.005076",
+        "end": "2025-10-22 10:31:18.205086",
+        "failed": false,
+        "msg": "",
+        "rc": 0,
+        "start": "2025-10-22 10:31:18.200010",
+        "stderr": "nginx version: nginx/1.24.0 (Ubuntu)",
+        "stderr_lines": [
+            "nginx version: nginx/1.24.0 (Ubuntu)"
+        ],
+        "stdout": "",
+        "stdout_lines": []
+    }
+}
+2025-10-22 15:31:18,982 p=4098 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 15:31:18,982 p=4098 u=asad n=ansible | 13.233.225.159             : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-22 15:52:04,858 p=4498 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 15:52:04,958 p=4498 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 15:52:16,551 p=4498 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 15:52:16,596 p=4498 u=asad n=ansible | TASK [default_system_conf : check nginx] ***************************************************************************************************
+2025-10-22 15:52:21,545 p=4498 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-22 15:52:21,564 p=4498 u=asad n=ansible | TASK [default_system_conf : print what task is returning] **********************************************************************************
+2025-10-22 15:52:21,607 p=4498 u=asad n=ansible | ok: [13.233.225.159] => {
+    "nginx_check": {
+        "changed": true,
+        "cmd": [
+            "nginx",
+            "-v"
+        ],
+        "delta": "0:00:00.004966",
+        "end": "2025-10-22 10:52:21.035514",
+        "failed": false,
+        "msg": "",
+        "rc": 0,
+        "start": "2025-10-22 10:52:21.030548",
+        "stderr": "nginx version: nginx/1.24.0 (Ubuntu)",
+        "stderr_lines": [
+            "nginx version: nginx/1.24.0 (Ubuntu)"
+        ],
+        "stdout": "",
+        "stdout_lines": []
+    }
+}
+2025-10-22 15:52:21,670 p=4498 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 15:52:21,671 p=4498 u=asad n=ansible | 13.233.225.159             : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-22 15:52:45,930 p=4625 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 15:52:45,989 p=4625 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 15:52:58,644 p=4625 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 15:52:58,677 p=4625 u=asad n=ansible | TASK [default_system_conf : check nginx] ***************************************************************************************************
+2025-10-22 15:53:04,498 p=4625 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-22 15:53:04,560 p=4625 u=asad n=ansible | TASK [default_system_conf : print what task is returning] **********************************************************************************
+2025-10-22 15:53:04,963 p=4625 u=asad n=ansible | ok: [13.233.225.159] => {
+    "nginx_check": {
+        "changed": true,
+        "cmd": [
+            "nginx",
+            "-v"
+        ],
+        "delta": "0:00:00.005247",
+        "end": "2025-10-22 10:53:03.869596",
+        "failed": false,
+        "msg": "",
+        "rc": 0,
+        "start": "2025-10-22 10:53:03.864349",
+        "stderr": "nginx version: nginx/1.24.0 (Ubuntu)",
+        "stderr_lines": [
+            "nginx version: nginx/1.24.0 (Ubuntu)"
+        ],
+        "stdout": "",
+        "stdout_lines": []
+    }
+}
+2025-10-22 15:53:05,062 p=4625 u=asad n=ansible | TASK [default_system_conf : print specific code only] **************************************************************************************
+2025-10-22 15:53:05,307 p=4625 u=asad n=ansible | ok: [13.233.225.159] => {
+    "msg": "return code is 0"
+}
+2025-10-22 15:53:05,530 p=4625 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 15:53:05,532 p=4625 u=asad n=ansible | 13.233.225.159             : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-22 15:56:09,508 p=4777 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 15:56:09,595 p=4777 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 15:56:23,252 p=4777 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 15:56:23,284 p=4777 u=asad n=ansible | TASK [default_system_conf : check nginx] ***************************************************************************************************
+2025-10-22 15:56:28,343 p=4777 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-22 15:56:28,412 p=4777 u=asad n=ansible | TASK [default_system_conf : install git on server] *****************************************************************************************
+2025-10-22 15:56:41,018 p=4777 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 15:56:41,075 p=4777 u=asad n=ansible | TASK [default_system_conf : print what task is returning] **********************************************************************************
+2025-10-22 15:56:41,294 p=4777 u=asad n=ansible | ok: [13.233.225.159] => {
+    "git_result": {
+        "cache_update_time": 1761128007,
+        "cache_updated": false,
+        "changed": false,
+        "failed": false
+    }
+}
+2025-10-22 15:56:41,466 p=4777 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 15:56:41,468 p=4777 u=asad n=ansible | 13.233.225.159             : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-22 16:53:30,498 p=3504 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 16:53:30,561 p=3504 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 16:54:14,263 p=3504 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 16:54:14,293 p=3504 u=asad n=ansible | TASK [default_system_conf : Create all required groups (primary + secondary)] **************************************************************
+2025-10-22 16:54:19,866 p=3504 u=asad n=ansible |  [ERROR]: User interrupted execution
+
+2025-10-22 16:54:44,160 p=3667 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 16:54:44,177 p=3667 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 16:54:44,182 p=3667 u=asad n=ansible |  [ERROR]: No matching task "nginx check" found. Note: --start-at-task can only follow static includes.
+
+2025-10-22 16:55:13,617 p=3713 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 16:55:13,645 p=3713 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 16:55:25,203 p=3713 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 16:55:25,295 p=3713 u=asad n=ansible | TASK [default_system_conf : check nginx] ***************************************************************************************************
+2025-10-22 16:55:36,281 p=3713 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-22 16:55:36,327 p=3713 u=asad n=ansible | TASK [default_system_conf : install git on server] *****************************************************************************************
+2025-10-22 16:55:50,536 p=3713 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 16:55:50,564 p=3713 u=asad n=ansible | TASK [default_system_conf : print what task is returning] **********************************************************************************
+2025-10-22 16:55:50,609 p=3713 u=asad n=ansible | ok: [13.233.225.159] => {
+    "git_result": {
+        "cache_update_time": 1761128007,
+        "cache_updated": false,
+        "changed": false,
+        "failed": false
+    }
+}
+2025-10-22 16:55:50,679 p=3713 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 16:55:50,680 p=3713 u=asad n=ansible | 13.233.225.159             : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-22 16:59:31,891 p=3995 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 16:59:31,915 p=3995 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 16:59:47,456 p=3995 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 16:59:47,480 p=3995 u=asad n=ansible | TASK [default_system_conf : check nginx] ***************************************************************************************************
+2025-10-22 16:59:53,808 p=3995 u=asad n=ansible | changed: [13.233.225.159]
+2025-10-22 16:59:53,841 p=3995 u=asad n=ansible | TASK [default_system_conf : install git on server] *****************************************************************************************
+2025-10-22 17:00:00,825 p=3995 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 17:00:00,851 p=3995 u=asad n=ansible | TASK [default_system_conf : print what task is returning] **********************************************************************************
+2025-10-22 17:00:00,915 p=3995 u=asad n=ansible | ok: [13.233.225.159] => {
+    "git_result": {
+        "cache_update_time": 1761128007,
+        "cache_updated": false,
+        "changed": false,
+        "failed": false
+    }
+}
+2025-10-22 17:00:00,998 p=3995 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 17:00:00,999 p=3995 u=asad n=ansible | 13.233.225.159             : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-22 17:06:11,961 p=4257 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 17:06:11,999 p=4257 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 17:06:47,330 p=4257 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 17:06:47,341 p=4257 u=asad n=ansible | TASK [default_system_conf : Install package and handle error] ******************************************************************************
+2025-10-22 17:06:54,515 p=4257 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"ansible_facts": {"pkg_mgr": "apt"}, "changed": false, "msg": ["Could not detect which major revision of yum is in use, which is required to determine module backend.", "You should manually specify use_backend to tell the module whether to use the yum (yum3) or dnf (yum4) backend})"]}
+2025-10-22 17:06:54,533 p=4257 u=asad n=ansible | TASK [default_system_conf : debug] *********************************************************************************************************
+2025-10-22 17:06:54,580 p=4257 u=asad n=ansible | ok: [13.233.225.159] => {
+    "msg": "Installation failed, skipping"
+}
+2025-10-22 17:06:54,641 p=4257 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 17:06:54,642 p=4257 u=asad n=ansible | 13.233.225.159             : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=1    ignored=0   
+2025-10-22 17:07:25,321 p=4403 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 17:07:25,353 p=4403 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 17:07:38,610 p=4403 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 17:07:38,641 p=4403 u=asad n=ansible | TASK [default_system_conf : Install package and handle error] ******************************************************************************
+2025-10-22 17:07:46,468 p=4403 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"changed": false, "msg": "No package matching 'nonexistent' is available"}
+2025-10-22 17:07:46,503 p=4403 u=asad n=ansible | TASK [default_system_conf : debug] *********************************************************************************************************
+2025-10-22 17:07:46,582 p=4403 u=asad n=ansible | ok: [13.233.225.159] => {
+    "msg": "Installation failed, skipping"
+}
+2025-10-22 17:07:46,678 p=4403 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 17:07:46,679 p=4403 u=asad n=ansible | 13.233.225.159             : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=1    ignored=0   
+2025-10-22 17:10:33,889 p=4547 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 17:10:33,921 p=4547 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 17:10:42,746 p=4547 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 17:10:42,774 p=4547 u=asad n=ansible | TASK [default_system_conf : Install package and handle error] ******************************************************************************
+2025-10-22 17:10:47,489 p=4547 u=asad n=ansible | fatal: [13.233.225.159]: FAILED! => {"changed": false, "msg": "No package matching 'nonexistent' is available"}
+2025-10-22 17:10:47,518 p=4547 u=asad n=ansible | TASK [default_system_conf : debug] *********************************************************************************************************
+2025-10-22 17:10:47,581 p=4547 u=asad n=ansible | ok: [13.233.225.159] => {
+    "msg": "Installation failed, skipping"
+}
+2025-10-22 17:10:47,600 p=4547 u=asad n=ansible | TASK [default_system_conf : after now install git] *****************************************************************************************
+2025-10-22 17:10:53,045 p=4547 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 17:10:53,133 p=4547 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 17:10:53,134 p=4547 u=asad n=ansible | 13.233.225.159             : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=1    ignored=0   
+2025-10-22 17:18:20,170 p=4785 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 17:18:20,201 p=4785 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 17:18:20,203 p=4785 u=asad n=ansible |  [ERROR]: No matching task "show all facts" found. Note: --start-at-task can only follow static includes.
+
+2025-10-22 17:19:35,630 p=4858 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 17:19:35,667 p=4858 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 17:20:00,147 p=4858 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 17:20:00,176 p=4858 u=asad n=ansible | TASK [default_system_conf : show all facts] ************************************************************************************************
+2025-10-22 17:20:10,125 p=4858 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 17:20:10,198 p=4858 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 17:20:10,199 p=4858 u=asad n=ansible | 13.233.225.159             : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-22 17:22:41,915 p=5047 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 17:22:41,974 p=5047 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 17:22:51,665 p=5047 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 17:22:51,703 p=5047 u=asad n=ansible | TASK [default_system_conf : show all facts] ************************************************************************************************
+2025-10-22 17:22:57,942 p=5047 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 17:22:57,975 p=5047 u=asad n=ansible | TASK [default_system_conf : show all facts using debug] ************************************************************************************
+2025-10-22 17:22:58,232 p=5047 u=asad n=ansible | ok: [13.233.225.159] => {
+    "ansible_facts": {
+        "all_ipv4_addresses": [
+            "172.31.43.187"
+        ],
+        "all_ipv6_addresses": [
+            "fe80::b0:96ff:febf:e4df"
+        ],
+        "ansible_local": {},
+        "apparmor": {
+            "status": "enabled"
+        },
+        "architecture": "x86_64",
+        "bios_date": "08/24/2006",
+        "bios_vendor": "Xen",
+        "bios_version": "4.11.amazon",
+        "board_asset_tag": "NA",
+        "board_name": "NA",
+        "board_serial": "NA",
+        "board_vendor": "NA",
+        "board_version": "NA",
+        "chassis_asset_tag": "NA",
+        "chassis_serial": "NA",
+        "chassis_vendor": "Xen",
+        "chassis_version": "NA",
+        "cmdline": {
+            "BOOT_IMAGE": "/vmlinuz-6.14.0-1011-aws",
+            "console": "ttyS0",
+            "nvme_core.io_timeout": "4294967295",
+            "panic": "-1",
+            "ro": true,
+            "root": "PARTUUID=d8b02072-b013-48de-b7a8-331276413234"
+        },
+        "date_time": {
+            "date": "2025-10-22",
+            "day": "22",
+            "epoch": "1761135777",
+            "epoch_int": "1761135777",
+            "hour": "12",
+            "iso8601": "2025-10-22T12:22:57Z",
+            "iso8601_basic": "20251022T122257087774",
+            "iso8601_basic_short": "20251022T122257",
+            "iso8601_micro": "2025-10-22T12:22:57.087774Z",
+            "minute": "22",
+            "month": "10",
+            "second": "57",
+            "time": "12:22:57",
+            "tz": "UTC",
+            "tz_dst": "UTC",
+            "tz_offset": "+0000",
+            "weekday": "Wednesday",
+            "weekday_number": "3",
+            "weeknumber": "42",
+            "year": "2025"
+        },
+        "default_ipv4": {
+            "address": "172.31.43.187",
+            "alias": "enX0",
+            "broadcast": "",
+            "gateway": "172.31.32.1",
+            "interface": "enX0",
+            "macaddress": "02:b0:96:bf:e4:df",
+            "mtu": 9001,
+            "netmask": "255.255.240.0",
+            "network": "172.31.32.0",
+            "prefix": "20",
+            "type": "ether"
+        },
+        "default_ipv6": {},
+        "device_links": {
+            "ids": {},
+            "labels": {
+                "xvda1": [
+                    "cloudimg-rootfs"
+                ],
+                "xvda15": [
+                    "UEFI"
+                ],
+                "xvda16": [
+                    "BOOT"
+                ]
+            },
+            "masters": {},
+            "uuids": {
+                "xvda1": [
+                    "41a438f9-9b73-40e9-9093-3c0a3ce03d5c"
+                ],
+                "xvda15": [
+                    "0007-49CF"
+                ],
+                "xvda16": [
+                    "fc01183f-27c0-4f69-b1c0-fb1c01e8fe57"
+                ]
+            }
+        },
+        "devices": {
+            "loop0": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "56624",
+                "sectorsize": "512",
+                "size": "27.65 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop1": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop2": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "151368",
+                "sectorsize": "512",
+                "size": "73.91 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop3": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "103976",
+                "sectorsize": "512",
+                "size": "50.77 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop4": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "151392",
+                "sectorsize": "512",
+                "size": "73.92 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop5": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "104296",
+                "sectorsize": "512",
+                "size": "50.93 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop6": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop7": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "512",
+                "vendor": null,
+                "virtual": 1
+            },
+            "xvda": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {
+                    "xvda1": {
+                        "holders": [],
+                        "links": {
+                            "ids": [],
+                            "labels": [
+                                "cloudimg-rootfs"
+                            ],
+                            "masters": [],
+                            "uuids": [
+                                "41a438f9-9b73-40e9-9093-3c0a3ce03d5c"
+                            ]
+                        },
+                        "sectors": "14677983",
+                        "sectorsize": 512,
+                        "size": "7.00 GB",
+                        "start": "2099200",
+                        "uuid": "41a438f9-9b73-40e9-9093-3c0a3ce03d5c"
+                    },
+                    "xvda14": {
+                        "holders": [],
+                        "links": {
+                            "ids": [],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": []
+                        },
+                        "sectors": "8192",
+                        "sectorsize": 512,
+                        "size": "4.00 MB",
+                        "start": "2048",
+                        "uuid": null
+                    },
+                    "xvda15": {
+                        "holders": [],
+                        "links": {
+                            "ids": [],
+                            "labels": [
+                                "UEFI"
+                            ],
+                            "masters": [],
+                            "uuids": [
+                                "0007-49CF"
+                            ]
+                        },
+                        "sectors": "217088",
+                        "sectorsize": 512,
+                        "size": "106.00 MB",
+                        "start": "10240",
+                        "uuid": "0007-49CF"
+                    },
+                    "xvda16": {
+                        "holders": [],
+                        "links": {
+                            "ids": [],
+                            "labels": [
+                                "BOOT"
+                            ],
+                            "masters": [],
+                            "uuids": [
+                                "fc01183f-27c0-4f69-b1c0-fb1c01e8fe57"
+                            ]
+                        },
+                        "sectors": "1869825",
+                        "sectorsize": 512,
+                        "size": "913.00 MB",
+                        "start": "227328",
+                        "uuid": "fc01183f-27c0-4f69-b1c0-fb1c01e8fe57"
+                    }
+                },
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "16777216",
+                "sectorsize": "512",
+                "size": "8.00 GB",
+                "support_discard": "512",
+                "vendor": null,
+                "virtual": 1
+            }
+        },
+        "discovered_interpreter_python": "/usr/bin/python3",
+        "distribution": "Ubuntu",
+        "distribution_file_parsed": true,
+        "distribution_file_path": "/etc/os-release",
+        "distribution_file_variety": "Debian",
+        "distribution_major_version": "24",
+        "distribution_release": "noble",
+        "distribution_version": "24.04",
+        "dns": {
+            "nameservers": [
+                "127.0.0.53"
+            ],
+            "options": {
+                "edns0": true,
+                "trust-ad": true
+            },
+            "search": [
+                "ap-south-1.compute.internal"
+            ]
+        },
+        "domain": "ap-south-1.compute.internal",
+        "effective_group_id": 0,
+        "effective_user_id": 0,
+        "enX0": {
+            "active": true,
+            "device": "enX0",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "off [fixed]",
+                "hsr_dup_offload": "off [fixed]",
+                "hsr_fwd_offload": "off [fixed]",
+                "hsr_tag_ins_offload": "off [fixed]",
+                "hsr_tag_rm_offload": "off [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "off [fixed]",
+                "macsec_hw_offload": "off [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "on [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_gro_hw": "off [fixed]",
+                "rx_gro_list": "off",
+                "rx_udp_gro_forwarding": "off",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "off [fixed]",
+                "tx_checksum_ipv4": "on [fixed]",
+                "tx_checksum_ipv6": "on",
+                "tx_checksum_sctp": "off [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_list": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "on [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_nocache_copy": "off",
+                "tx_scatter_gather": "on",
+                "tx_scatter_gather_fraglist": "off [fixed]",
+                "tx_sctp_segmentation": "off [fixed]",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "off [fixed]",
+                "tx_tcp_mangleid_segmentation": "off",
+                "tx_tcp_segmentation": "on",
+                "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                "tx_udp_segmentation": "off [fixed]",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "vlan_challenged": "off [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "172.31.43.187",
+                "broadcast": "",
+                "netmask": "255.255.240.0",
+                "network": "172.31.32.0",
+                "prefix": "20"
+            },
+            "ipv6": [
+                {
+                    "address": "fe80::b0:96ff:febf:e4df",
+                    "prefix": "64",
+                    "scope": "link"
+                }
+            ],
+            "macaddress": "02:b0:96:bf:e4:df",
+            "module": "xen_netfront",
+            "mtu": 9001,
+            "pciid": "vif-0",
+            "promisc": false,
+            "timestamping": [],
+            "type": "ether"
+        },
+        "env": {
+            "HOME": "/root",
+            "LANG": "C.UTF-8",
+            "LOGNAME": "root",
+            "MAIL": "/var/mail/root",
+            "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin",
+            "PWD": "/home/ubuntu",
+            "SHELL": "/bin/bash",
+            "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-yjyhjumpammjjjrsrexxrtcatqhykqzl ; /usr/bin/python3 /home/ubuntu/.ansible/tmp/ansible-tmp-1761135772.1352425-5106-65141828664722/AnsiballZ_setup.py",
+            "SUDO_GID": "1000",
+            "SUDO_UID": "1000",
+            "SUDO_USER": "ubuntu",
+            "TERM": "xterm-256color",
+            "USER": "root"
+        },
+        "fibre_channel_wwn": [],
+        "fips": false,
+        "form_factor": "Other",
+        "fqdn": "ip-172-31-43-187.ap-south-1.compute.internal",
+        "gather_subset": [
+            "all"
+        ],
+        "hostname": "ip-172-31-43-187",
+        "hostnqn": "",
+        "interfaces": [
+            "lo",
+            "enX0"
+        ],
+        "is_chroot": false,
+        "iscsi_iqn": "",
+        "kernel": "6.14.0-1011-aws",
+        "kernel_version": "#11~24.04.1-Ubuntu SMP Fri Aug  1 02:07:25 UTC 2025",
+        "lo": {
+            "active": true,
+            "device": "lo",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on [fixed]",
+                "hsr_dup_offload": "off [fixed]",
+                "hsr_fwd_offload": "off [fixed]",
+                "hsr_tag_ins_offload": "off [fixed]",
+                "hsr_tag_rm_offload": "off [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "on [fixed]",
+                "macsec_hw_offload": "off [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "on [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_gro_hw": "off [fixed]",
+                "rx_gro_list": "off",
+                "rx_udp_gro_forwarding": "off",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "on [fixed]",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "on [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_list": "on",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_nocache_copy": "off [fixed]",
+                "tx_scatter_gather": "on [fixed]",
+                "tx_scatter_gather_fraglist": "on [fixed]",
+                "tx_sctp_segmentation": "on",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "on",
+                "tx_tcp_mangleid_segmentation": "on",
+                "tx_tcp_segmentation": "on",
+                "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                "tx_udp_segmentation": "on",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "vlan_challenged": "on [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "127.0.0.1",
+                "broadcast": "",
+                "netmask": "255.0.0.0",
+                "network": "127.0.0.0",
+                "prefix": "8"
+            },
+            "ipv6": [
+                {
+                    "address": "::1",
+                    "prefix": "128",
+                    "scope": "host"
+                }
+            ],
+            "mtu": 65536,
+            "promisc": false,
+            "timestamping": [],
+            "type": "loopback"
+        },
+        "loadavg": {
+            "15m": 0.0,
+            "1m": 0.0,
+            "5m": 0.0
+        },
+        "lsb": {
+            "codename": "noble",
+            "description": "Ubuntu 24.04.3 LTS",
+            "id": "Ubuntu",
+            "major_release": "24",
+            "release": "24.04"
+        },
+        "lvm": {
+            "lvs": {},
+            "pvs": {},
+            "vgs": {}
+        },
+        "machine": "x86_64",
+        "machine_id": "ec262f6a6149d6fe5ebb12bccf5f82d5",
+        "memfree_mb": 118,
+        "memory_mb": {
+            "nocache": {
+                "free": 641,
+                "used": 316
+            },
+            "real": {
+                "free": 118,
+                "total": 957,
+                "used": 839
+            },
+            "swap": {
+                "cached": 0,
+                "free": 0,
+                "total": 0,
+                "used": 0
+            }
+        },
+        "memtotal_mb": 957,
+        "module_setup": true,
+        "mounts": [
+            {
+                "block_available": 1069769,
+                "block_size": 4096,
+                "block_total": 1758594,
+                "block_used": 688825,
+                "device": "/dev/root",
+                "fstype": "ext4",
+                "inode_available": 801985,
+                "inode_total": 917504,
+                "inode_used": 115519,
+                "mount": "/",
+                "options": "rw,relatime,discard,errors=remount-ro,commit=30",
+                "size_available": 4381773824,
+                "size_total": 7203201024,
+                "uuid": "41a438f9-9b73-40e9-9093-3c0a3ce03d5c"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 222,
+                "block_used": 222,
+                "device": "/dev/loop0",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 14,
+                "inode_used": 14,
+                "mount": "/snap/amazon-ssm-agent/11797",
+                "options": "ro,nodev,relatime,errors=continue,threads=single",
+                "size_available": 0,
+                "size_total": 29097984,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 171150,
+                "block_size": 4096,
+                "block_total": 225380,
+                "block_used": 54230,
+                "device": "/dev/xvda16",
+                "fstype": "ext4",
+                "inode_available": 57891,
+                "inode_total": 58496,
+                "inode_used": 605,
+                "mount": "/boot",
+                "options": "rw,relatime",
+                "size_available": 701030400,
+                "size_total": 923156480,
+                "uuid": "fc01183f-27c0-4f69-b1c0-fb1c01e8fe57"
+            },
+            {
+                "block_available": 201164,
+                "block_size": 512,
+                "block_total": 213663,
+                "block_used": 12499,
+                "device": "/dev/xvda15",
+                "fstype": "vfat",
+                "inode_available": 0,
+                "inode_total": 0,
+                "inode_used": 0,
+                "mount": "/boot/efi",
+                "options": "rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro",
+                "size_available": 102995968,
+                "size_total": 109395456,
+                "uuid": "0007-49CF"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 407,
+                "block_used": 407,
+                "device": "/dev/loop3",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 616,
+                "inode_used": 616,
+                "mount": "/snap/snapd/25202",
+                "options": "ro,nodev,relatime,errors=continue,threads=single",
+                "size_available": 0,
+                "size_total": 53346304,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 592,
+                "block_used": 592,
+                "device": "/dev/loop4",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 14263,
+                "inode_used": 14263,
+                "mount": "/snap/core22/2133",
+                "options": "ro,nodev,relatime,errors=continue,threads=single",
+                "size_available": 0,
+                "size_total": 77594624,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 408,
+                "block_used": 408,
+                "device": "/dev/loop5",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 617,
+                "inode_used": 617,
+                "mount": "/snap/snapd/25577",
+                "options": "ro,nodev,relatime,errors=continue,threads=single",
+                "size_available": 0,
+                "size_total": 53477376,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 592,
+                "block_used": 592,
+                "device": "/dev/loop2",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 14263,
+                "inode_used": 14263,
+                "mount": "/snap/core22/2139",
+                "options": "ro,nodev,relatime,errors=continue,threads=single",
+                "size_available": 0,
+                "size_total": 77594624,
+                "uuid": "N/A"
+            }
+        ],
+        "nodename": "ip-172-31-43-187",
+        "os_family": "Debian",
+        "pkg_mgr": "apt",
+        "proc_cmdline": {
+            "BOOT_IMAGE": "/vmlinuz-6.14.0-1011-aws",
+            "console": [
+                "tty1",
+                "ttyS0"
+            ],
+            "nvme_core.io_timeout": "4294967295",
+            "panic": "-1",
+            "ro": true,
+            "root": "PARTUUID=d8b02072-b013-48de-b7a8-331276413234"
+        },
+        "processor": [
+            "0",
+            "GenuineIntel",
+            "Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz"
+        ],
+        "processor_cores": 1,
+        "processor_count": 1,
+        "processor_nproc": 1,
+        "processor_threads_per_core": 1,
+        "processor_vcpus": 1,
+        "product_name": "HVM domU",
+        "product_serial": "ec262f6a-6149-d6fe-5ebb-12bccf5f82d5",
+        "product_uuid": "ec262f6a-6149-d6fe-5ebb-12bccf5f82d5",
+        "product_version": "4.11.amazon",
+        "python": {
+            "executable": "/usr/bin/python3",
+            "has_sslcontext": true,
+            "type": "cpython",
+            "version": {
+                "major": 3,
+                "micro": 3,
+                "minor": 12,
+                "releaselevel": "final",
+                "serial": 0
+            },
+            "version_info": [
+                3,
+                12,
+                3,
+                "final",
+                0
+            ]
+        },
+        "python_version": "3.12.3",
+        "real_group_id": 0,
+        "real_user_id": 0,
+        "selinux": {
+            "status": "disabled"
+        },
+        "selinux_python_present": true,
+        "service_mgr": "systemd",
+        "ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLJV05LwzOsf1TFjW9ER/d9g1czpqO6ZEvnxQpHuMGA1tsERvOKLTzYLivU9IbkUhcAZT55/FR75r4ujoJZUgiw=",
+        "ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256",
+        "ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIFU02mhOqZ1c0BGUzEMiY8eFO4qB/hw9EOHdfcNCQEXd",
+        "ssh_host_key_ed25519_public_keytype": "ssh-ed25519",
+        "ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCiPbf85CREDlBJqjOIWzrgT/xlqNvcqXgDUSVy5AGiKvJ31FsSOcUSZC30JaarOKKhAby5TqAzDuzcIiKu99lHpKPAEI6UyAezhy7yCi3p9FeH3e5Lfe9kIjad5EORGJCOBwUg0tCv5vkUCG/9iLE+XJf/tqebHhDdlxfCHQKStZW55lQSfyhHgUhWiNlOEpNi7/6AnF4dQm1XiWHhTC6YujkXp83xt1XwNUF36L2gXjmNfMwK6Slf65M82ITSH7hst1ekmxp9yGULknEizmeKC67BXEGRQ1ls5+MdCwSBe9xM3IhF4ppY8d6opw4iMX7mQ0y3soUPd9MXCQgjHC1wFjPgBEReD8bS6Lp8YodCf7JEepJ8d/T2pCDrB8JhYQCn8uySCCJ6twaaI8GyGhukZ+Mxy1rBUiKHuMFAprWJSnAOWpRsV4WKebj4e/TtLDyzrww/4OLDQoGY3ly+RIz0KGw8hbmogLanJc3J4Bm+Ep+ERYi6/4Dm24YoOiA+LFs=",
+        "ssh_host_key_rsa_public_keytype": "ssh-rsa",
+        "swapfree_mb": 0,
+        "swaptotal_mb": 0,
+        "system": "Linux",
+        "system_capabilities": [],
+        "system_capabilities_enforced": "False",
+        "system_vendor": "Xen",
+        "uptime_seconds": 774637,
+        "user_dir": "/root",
+        "user_gecos": "root",
+        "user_gid": 0,
+        "user_id": "root",
+        "user_shell": "/bin/bash",
+        "user_uid": 0,
+        "userspace_architecture": "x86_64",
+        "userspace_bits": "64",
+        "virtualization_role": "guest",
+        "virtualization_tech_guest": [
+            "xen"
+        ],
+        "virtualization_tech_host": [],
+        "virtualization_type": "xen"
+    }
+}
+2025-10-22 17:22:58,386 p=5047 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 17:22:58,387 p=5047 u=asad n=ansible | 13.233.225.159             : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-22 17:44:17,938 p=5303 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-22 17:44:18,045 p=5303 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-22 17:44:29,374 p=5303 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-22 17:44:29,423 p=5303 u=asad n=ansible | TASK [default_system_conf : Run only on CentOS] ********************************************************************************************
+2025-10-22 17:44:29,635 p=5303 u=asad n=ansible | skipping: [13.233.225.159]
+2025-10-22 17:44:29,816 p=5303 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-22 17:44:29,817 p=5303 u=asad n=ansible | 13.233.225.159             : ok=1    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2025-10-23 11:56:57,871 p=3988 u=asad n=ansible | PLAY [install basic setup on server] *******************************************************************************************************
+2025-10-23 11:56:57,931 p=3988 u=asad n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2025-10-23 11:57:09,523 p=3988 u=asad n=ansible | ok: [13.233.225.159]
+2025-10-23 11:57:09,556 p=3988 u=asad n=ansible | TASK [default_system_conf : Run only on CentOS] ********************************************************************************************
+2025-10-23 11:57:09,597 p=3988 u=asad n=ansible | skipping: [13.233.225.159]
+2025-10-23 11:57:09,631 p=3988 u=asad n=ansible | TASK [default_system_conf : show is_family using debug message] ****************************************************************************
+2025-10-23 11:57:09,678 p=3988 u=asad n=ansible | ok: [13.233.225.159] => {
+    "msg": "os_family of host is \"Debian\""
+}
+2025-10-23 11:57:09,755 p=3988 u=asad n=ansible | PLAY RECAP *********************************************************************************************************************************
+2025-10-23 11:57:09,756 p=3988 u=asad n=ansible | 13.233.225.159             : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   

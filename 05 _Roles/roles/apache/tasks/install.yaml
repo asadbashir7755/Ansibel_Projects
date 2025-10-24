@@ -1,0 +1,5 @@
+---
+  - name: install apache on server
+    ansible.builtin.package:
+      name: apache2
+      state: present

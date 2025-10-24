@@ -1,5 +1,0 @@
-site_name: myportfolio
-domain_name: myportfolio.local
-repo_url: 'https://github.com/asadbashir7755/asadbashir-portfolio.com.git'
-site_root: "/var/www/html/{{ site_name }}"
-listen_port: 80

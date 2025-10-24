@@ -1,0 +1,8 @@
+packages:
+  - unzip 
+  - git
+  - curl
+
+choices:
+  - update_cache: yes
+    upgrade: yes
