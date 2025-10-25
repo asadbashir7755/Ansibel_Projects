@@ -2,7 +2,8 @@
   - name: installing lamp stack on server
     hosts: ubuntuserver
     become: true
-    # gather_facts: false
+    vars_files:
+      ../vault_1.0_staging/vault.yaml
     roles:
       - php_website
       # - database

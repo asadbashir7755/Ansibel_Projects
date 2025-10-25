@@ -84,3 +84,10 @@ add example
 how hanle errors usig block and rescue  : why use it
 ignore_error : yes why use it
 how use registers in ansible 
+
+
+blue green deployment
+canary release what are these 
+
+creating strategy for rolling updates what are these
+what are pre tasks posts tasks tasks gelegation,testing with wait_for

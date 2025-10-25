@@ -43,7 +43,7 @@
       loop: "{{ config_paths }}"
 
     - name: Import SQL dump from app repo
-      shell: mysql -u{{ db_user }} -p{{ db_pass }} {{ db_name }} < {{ db_dumpfile_path }}
+      shell: mysql -u{{ o_db_user }} -p{{ o_db_pass }} {{ o_db_name }} < {{ db_dumpfile_path }}
       become: true
       notify: restart apache
 

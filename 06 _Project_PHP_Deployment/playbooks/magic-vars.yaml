@@ -1,0 +1,55 @@
+---
+- name: Print OS info
+  hosts: all
+  gather_facts: yes
+  tasks:
+    - debug:
+        msg: "This host {{ inventory_hostname }} is running {{ ansible_facts['distribution'] }}"
+
+- name: Show database IP
+  hosts: ubuntuserver
+  gather_facts: yes
+  tasks:
+    - debug:
+        msg: "Database IP is {{ hostvars['13.233.164.36']['ansible_default_ipv4']['address'] }}"
+
+- name: Current host groups
+  hosts: ubuntuserver
+  gather_facts: no
+  tasks:
+    - debug:
+        msg: "Current host groups are: {{ group_names }}"
+
+# - name: Show all cached facts
+#   hosts: all
+#   gather_facts: yes
+#   tasks:
+#     - debug:
+#         var: ansible_facts
+
+- name: Show playbook directory
+  hosts: all
+  gather_facts: no
+  tasks:
+    - debug:
+        var: ansible_playbook_dir
+
+- name: Explore magic vars
+  hosts: all
+  gather_facts: yes
+  tasks:
+    - name: Show host name
+      debug:
+        var: inventory_hostname
+
+    - name: Show groups this host belongs to
+      debug:
+        var: group_names
+
+    # - name: Show all cached facts
+    #   debug:
+    #     var: ansible_facts
+
+    - name: Show playbook directory
+      debug:
+        var: ansible_playbook_dir

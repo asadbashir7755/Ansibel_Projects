@@ -2,19 +2,19 @@
 # MySQL Configuration for Dev
 # ==============================
 
-mysql_root_password: "elms_user_root@123"
+mysql_root_password: "{{o_mysql_root_password}}"
 
 # Database creation
 mysql_databases:
-  - name: elms2_db
+  - name: "{{o_db_name}}"
     encoding: utf8
     collation: utf8_general_ci
 
 # Application user creation
 mysql_users:
-  - name: elms_user
-    host: "%"
-    password: "elms_user@123"
+  - name: "{{o_db_user}}"
+    host: "{{o_db_host}}"
+    password: "{{o_db_pass}}"
     priv: "elms2_db.*:ALL"
 
 # Bind to all interfaces (allow remote connections if firewall allows)
